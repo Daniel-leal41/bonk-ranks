@@ -1,0 +1,132 @@
+/* ============================================================
+   BonkRANKS — Player Page (playerPage.html)
+   Estilos complementares ao Bootstrap 5.3.
+   Aqui ficam apenas ajustes que o Bootstrap não cobre.
+   Regra: nunca usar estilos inline no HTML.
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1) Layout geral da página
+   O body vira um flex column que ocupa 100% da altura da tela
+   (mesmo comportamento da home). Assim o main cresce e o
+   conteúdo usa todo o espaço abaixo da navbar.
+   ------------------------------------------------------------ */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* O main cresce para ocupar o espaço restante abaixo da navbar. */
+.player-main {
+  flex: 1;
+}
+
+/* ------------------------------------------------------------
+   2) Avatar do perfil — responsivo
+   Tamanho fixo no desktop e reduzido no mobile
+   (mesmo comportamento do layout original).
+   ------------------------------------------------------------ */
+.profile-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .profile-avatar {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+/* ------------------------------------------------------------
+   3) Nome do jogador — tipografia fluida
+   Desktop: 2.8rem com ellipsis quando o nome for muito longo.
+   Mobile: encolhe proporcional à largura da tela via clamp e
+   o texto pode quebrar em várias linhas.
+   ------------------------------------------------------------ */
+.profile-name {
+  font-size: clamp(1.6rem, 5vw, 2.8rem);
+  line-height: 1.1;
+}
+
+@media (min-width: 769px) {
+  .profile-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/* ------------------------------------------------------------
+   4) Caixa do RANK
+   Só o padding é definido aqui; borda e arredondamento usam
+   utilitários do Bootstrap (border, rounded-3, text-center).
+   O gradiente da letra é aplicado dinamicamente pelo
+   rankColors.js via applyRankColor().
+   ------------------------------------------------------------ */
+.profile-rank-box {
+  padding: 1.2rem 2rem;
+}
+
+@media (max-width: 768px) {
+  .profile-rank-box {
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* Rótulo "RANK" acima da letra. */
+.rank-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.3rem;
+}
+
+/* Letra do rank — tipografia fluida
+   (o tamanho acompanha a tela no mobile, igual ao original). */
+.profile-rank {
+  font-size: clamp(3.2rem, 10vw, 5rem);
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* ------------------------------------------------------------
+   5) Caixa de Skills / Description
+   O grid (2 colunas no desktop, 1 no mobile) e a borda são
+   feitos pelo Bootstrap (.card, .row e .col). Aqui só o
+   wrapper do gráfico, que precisa ser centralizado e ter
+   largura máxima de 360px no mobile.
+   ------------------------------------------------------------ */
+.skills-chart-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.skills-chart-wrapper canvas {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .skills-chart-wrapper {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
+
+/* ------------------------------------------------------------
+   6) Mensagem de "Jogador não encontrado"
+   Gerada pelo renderPlayer.js sem estilos inline.
+   ------------------------------------------------------------ */
+.player-not-found {
+  text-align: center;
+  padding: 2rem;
+}

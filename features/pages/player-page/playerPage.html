@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil — BonkRANKS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/player.css">
+  <link rel="icon" type="image/x-icon"
+    href="https://res.cloudinary.com/dmmunstfz/image/upload/q_auto/f_auto/v1776456354/BonkRankLogo_tbhxaw.png">
+</head>
+<body>
+
+  <header class="navbar bg-body-tertiary">
+    <div class="container">
+      <a href="../../../index.html" class="navbar-brand d-flex align-items-center gap-2">
+        <img class="rounded-circle"
+          src="https://res.cloudinary.com/dmmunstfz/image/upload/q_auto/f_auto/v1776456354/BonkRankLogo_tbhxaw.png"
+          width="36" height="36" alt="Logo BonkRANKS">
+        <span class="fw-bold">BonkRANKS</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="container player-main py-5" id="player-container">
+    <!-- renderPlayer.js preenche aqui -->
+  </main>
+
+  <!-- BIBLIOTECA CHART.JS VIA CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Dados e utilitários do projeto. Na proposta os caminhos apontam
+       para o projeto real para funcionar ao abrir; quando aplicado ao
+       site, voltam a ser ../../api/data.js e ../../shared/... -->
+  <script src="../../api/data.js"></script>
+  <script src="../../shared/statsUtils.js"></script>
+  <script src="../../shared/rankColors.js"></script>
+  <script src="js/renderPlayer.js"></script>
+
+</body>
+</html>

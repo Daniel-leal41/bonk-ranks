@@ -1,0 +1,71 @@
+/* ============================================================
+   BonkRANKS — Home (index.html)
+   Estilos complementares ao Bootstrap 5.3.
+   Aqui ficam apenas ajustes que o Bootstrap não cobre.
+   Regra: nunca usar estilos inline no HTML.
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1) Layout geral da página
+   O body vira um flex column que ocupa 100% da altura da tela.
+   Assim o main cresce e o conteúdo pode ser centralizado na
+   vertical (mesmo comportamento do layout antigo).
+   ------------------------------------------------------------ */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* O main cresce para ocupar o espaço restante abaixo da navbar,
+   permitindo a centralização vertical do conteúdo. */
+.home-wrapper {
+  flex: 1;
+}
+
+/* ------------------------------------------------------------
+   2) Largura máxima do conteúdo
+   O .container do Bootstrap centraliza, mas não limita a
+   largura a 700px em telas grandes. Garantimos aqui.
+   ------------------------------------------------------------ */
+.home-content {
+  max-width: 700px;
+}
+
+/* ------------------------------------------------------------
+   3) Barra de pesquisa
+   Bootstrap não tem utilidade para limitar a largura do form
+   a 550px, então definimos aqui.
+   ------------------------------------------------------------ */
+.home-form {
+  max-width: 550px;
+}
+
+/* ------------------------------------------------------------
+   4) Avatar principal — responsivo
+   Tamanho fixo no desktop e reduzido no mobile
+   (mesmo comportamento do layout original).
+   ------------------------------------------------------------ */
+.big-avatar {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .big-avatar {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* ------------------------------------------------------------
+   5) Título principal — tipografia fluida
+   Desktop: 3.2rem (igual ao original).
+   Mobile: encolhe proporcional à largura da tela via clamp,
+   evitando que o texto fique grande demais no celular.
+   ------------------------------------------------------------ */
+.home-title {
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  line-height: 1.1;
+}

@@ -1,0 +1,266 @@
+[
+  {
+    "id": "p001",
+    "avatarUrl": "https://res.cloudinary.com/dmmunstfz/image/upload/q_auto/f_auto/v1776465191/skit_d43qjn.png",
+    "username": "Skitsuna",
+    "title": "",
+    "region": "BR",
+    "rank": "",
+    "description": "",
+    "skills": {
+      "IQ": {
+        "Consistency": 92,
+        "Decision Making": 90,
+        "Mechanics": 93,
+        "Control": 96
+      },
+      "Defense": {
+        "Positioning": 96,
+        "Recovery": 90,
+        "Counter": 98
+      },
+      "Offense": {
+        "Pressure": 91,
+        "Combo": 90,
+        "Finishing": 91
+      },
+      "Core": {
+        "Timing": 92,
+        "Reaction": 90,
+        "Adaptability": 93,
+        "Patience": 93,
+        "Unpredictability": 91
+      },
+      "Mental": {
+        "Focus": 93,
+        "Confidence": 97,
+        "Stamina": 101
+      },
+      "Special": {
+        "Crowd Control": 95,
+        "Synergy": 90,
+        "luck": 93
+      }
+    }
+  },
+  {
+    "id": "p002",
+    "avatarUrl": "https://res.cloudinary.com/dmmunstfz/image/upload/q_auto/f_auto/v1776431870/skin2_gxzalm.png",
+    "username": "Nauazin II",
+    "title": "",
+    "region": "BR",
+    "rank": "",
+    "description": "",
+    "skills": {
+       "IQ": {
+        "Consistency": 86,
+        "Decision Making": 84,
+        "Mechanics": 90,
+        "Control": 81
+      },
+      "Defense": {
+        "Positioning": 86,
+        "Recovery": 84,
+        "Counter": 88
+      },
+      "Offense": {
+        "Pressure": 93,
+        "Combo": 91,
+        "Finishing": 92
+      },
+      "Core": {
+        "Timing": 99,
+        "Reaction": 94,
+        "Adaptability": 88,
+        "Patience": 84,
+        "Unpredictability": 85
+      },
+      "Mental": {
+        "Focus": 75,
+        "Confidence": 75,
+        "Stamina": 93
+      },
+      "Special": {
+        "Crowd Control": 87,
+        "Synergy": 93,
+        "luck": 88
+      }
+    }
+  },
+  {
+    "id": "p003",
+    "avatarUrl": "https://res.cloudinary.com/dmmunstfz/image/upload/q_auto/f_auto/v1776465167/Dor_rx4fiz.png",
+    "username": "Dorwammu",
+    "title": "",
+    "region": "BR",
+    "rank": "",
+    "description": "",
+    "skills": {
+       "IQ": {
+        "Consistency": 86,
+        "Decision Making": 90,
+        "Mechanics": 90,
+        "Control": 81
+      },
+      "Defense": {
+        "Positioning": 95,
+        "Recovery": 93,
+        "Counter": 96
+      },
+      "Offense": {
+        "Pressure": 79,
+        "Combo": 82,
+        "Finishing": 83
+      },
+      "Core": {
+        "Timing": 94,
+        "Reaction": 88,
+        "Adaptability": 84,
+        "Patience": 90,
+        "Unpredictability": 93
+      },
+      "Mental": {
+        "Focus": 91,
+        "Confidence": 91,
+        "Stamina": 98
+      },
+      "Special": {
+        "Crowd Control": 89,
+        "Synergy": 87,
+        "luck": 95
+      }
+    }
+  },
+  {
+    "id": "p004",
+    "avatarUrl": "https://res.cloudinary.com/dmmunstfz/image/upload/q_auto/f_auto/v1776464971/frigo_wbjjo9.png",
+    "username": "Frigo_bar",
+    "title": "",
+    "region": "BR",
+    "rank": "",
+    "description": "Frigo_bar is a player",
+    "skills": {
+       "IQ": {
+        "Consistency": 90,
+        "Decision Making": 96,
+        "Mechanics": 94,
+        "Control": 95
+      },
+      "Defense": {
+        "Positioning": 98,
+        "Recovery": 90,
+        "Counter": 99
+      },
+      "Offense": {
+        "Pressure": 87,
+        "Combo": 89,
+        "Finishing": 94
+      },
+      "Core": {
+        "Timing": 98,
+        "Reaction": 93,
+        "Adaptability": 93,
+        "Patience": 92,
+        "Unpredictability": 88
+      },
+      "Mental": {
+        "Focus": 89,
+        "Confidence": 99,
+        "Stamina": 95
+      },
+      "Special": {
+        "Crowd Control": 96,
+        "Synergy": 96,
+        "luck": 85
+      }
+    }
+  },
+  {
+    "id": "p006",
+    "avatarUrl": "",
+    "username": "Teste",
+    "title": "TESTE",
+    "region": "BR",
+    "rank": "TESTE",
+    "description": "Lorem ipsum dolor sit ",
+    "skills": {
+       "IQ": {
+        "Consistency": 100,
+        "Decision Making": 100,
+        "Mechanics": 100,
+        "Control": 100
+      },
+      "Defense": {
+        "Positioning": 100,
+        "Recovery": 100,
+        "Counter": 100
+      },
+      "Offense": {
+        "Pressure": 100,
+        "Combo": 100,
+        "Finishing": 100
+      },
+      "Core": {
+        "Timing": 100,
+        "Reaction": 100,
+        "Adaptability": 100,
+        "Patience": 100,
+        "Unpredictability": 100
+      },
+      "Mental": {
+        "Focus": 100,
+        "Confidence": 100,
+        "Stamina": 100
+      },
+      "Special": {
+        "Crowd Control": 100,
+        "Synergy": 100,
+        "luck": 100
+      }
+    }
+  },
+  {
+    "id": "p007",
+    "avatarUrl": "https://res.cloudinary.com/dmmunstfz/image/upload/q_auto/f_auto/v1776465169/endercron_nsxb6u.png",
+    "username": "EnderCron",
+    "title": "",
+    "region": "USA",
+    "rank": "S",
+    "description": "",
+    "skills": {
+       "IQ": {
+        "Consistency": 87,
+        "Decision Making": 85,
+        "Mechanics": 95,
+        "Control": 92
+      },
+      "Defense": {
+        "Positioning": 92,
+        "Recovery": 94,
+        "Counter": 86
+      },
+      "Offense": {
+        "Pressure": 100,
+        "Combo": 98,
+        "Finishing": 96
+      },
+      "Core": {
+        "Timing": 98,
+        "Reaction": 98,
+        "Adaptability": 97,
+        "Patience": 79,
+        "Unpredictability": 95
+      },
+      "Mental": {
+        "Focus": 88,
+        "Confidence": 98,
+        "Stamina": 97
+      },
+      "Special": {
+        "Crowd Control": 90,
+        "Synergy": 82,
+        "luck": 95
+      }
+    }
+  }
+]
