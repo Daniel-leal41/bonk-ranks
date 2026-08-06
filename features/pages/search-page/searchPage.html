@@ -31,108 +31,148 @@
       <aside class="col-12 col-md-4 col-lg-3">
         <div class="filter-sidebar border rounded-3 p-3 bg-body-tertiary">
 
-          <!-- Região: cada checkbox carrega filter-region -->
-          <div class="filter-group mb-4" data-filter-type="region">
-            <h3 class="filter-title text-secondary">Region</h3>
-            <ul class="filter-list list-unstyled d-flex flex-wrap gap-3 mb-0 flex-md-column gap-md-2">
-              <li>
-                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
-                  <input type="checkbox" value="BR" class="form-check-input filter-region">
-                  BR
-                </label>
-              </li>
-              <li>
-                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
-                  <input type="checkbox" value="NA" class="form-check-input filter-region">
-                  NA
-                </label>
-              </li>
-              <li>
-                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
-                  <input type="checkbox" value="EU" class="form-check-input filter-region">
-                  EU
-                </label>
-              </li>
-            </ul>
-          </div>
+          <!-- Accordion de filtros: cada grupo (Region/Rank) vira um painel
+               colapsável para não exibir todas as checkboxes de uma vez. -->
+          <div class="accordion filter-accordion" id="filterAccordion">
 
-          <!-- Rank: agora checkboxes, 1+ selecionáveis, cada um com filter-rank -->
-          <div class="filter-group mb-4" data-filter-type="rank">
-            <h3 class="filter-title text-secondary">Rank</h3>
-            <ul class="filter-list list-unstyled d-flex flex-wrap gap-3 mb-0 flex-md-column gap-md-2">
-              <li>
-                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
-                  <input type="checkbox" value="S+" class="form-check-input filter-rank">
-                  S+
-                </label>
-              </li>
-              <li>
-                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
-                  <input type="checkbox" value="S" class="form-check-input filter-rank">
-                  S
-                </label>
-              </li>
-              <li>
-                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
-                  <input type="checkbox" value="S-" class="form-check-input filter-rank">
-                  S-
-                </label>
-              </li>
-              <li>
-                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
-                  <input type="checkbox" value="A+" class="form-check-input filter-rank">
-                  A+
-                </label>
-              </li>
-              <li>
-                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
-                  <input type="checkbox" value="A" class="form-check-input filter-rank">
-                  A
-                </label>
-              </li>
-              <li>
-                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
-                  <input type="checkbox" value="A-" class="form-check-input filter-rank">
-                  A-
-                </label>
-              </li>
-              <li>
-                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
-                  <input type="checkbox" value="B+" class="form-check-input filter-rank">
-                  B+
-                </label>
-              </li>
-              <li>
-                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
-                  <input type="checkbox" value="B" class="form-check-input filter-rank">
-                  B
-                </label>
-              </li>
-              <li>
-                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
-                  <input type="checkbox" value="B-" class="form-check-input filter-rank">
-                  B-
-                </label>
-              </li>
-              <li>
-                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
-                  <input type="checkbox" value="C+" class="form-check-input filter-rank">
-                  C+
-                </label>
-              </li>
-              <li>
-                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
-                  <input type="checkbox" value="C" class="form-check-input filter-rank">
-                  C
-                </label>
-              </li>
-              <li>
-                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
-                  <input type="checkbox" value="C-" class="form-check-input filter-rank">
-                  C-
-                </label>
-              </li>
-            </ul>
+            <!-- Região: cada checkbox carrega filter-region -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapse-region" aria-expanded="true" aria-controls="collapse-region">
+                  Region
+                </button>
+              </h2>
+              <div id="collapse-region" class="accordion-collapse collapse show" data-bs-parent="#filterAccordion">
+                <div class="accordion-body">
+                  <div class="filter-group" data-filter-type="region">
+                    <ul class="filter-list list-unstyled d-flex flex-wrap gap-3 mb-0 flex-md-column gap-md-2">
+                      <li>
+                        <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                          <input type="checkbox" value="BR" class="form-check-input filter-region">
+                          BR
+                        </label>
+                      </li>
+                      <li>
+                        <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                          <input type="checkbox" value="USA" class="form-check-input filter-region">
+                          USA
+                        </label>
+                      </li>
+                      <li>
+                        <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                          <input type="checkbox" value="EU" class="form-check-input filter-region">
+                          EU
+                        </label>
+                      </li>
+                      <li>
+                        <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                          <input type="checkbox" value="AU" class="form-check-input filter-region">
+                          AU
+                        </label>
+                      </li>
+                      <li>
+                        <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                          <input type="checkbox" value="RU" class="form-check-input filter-region">
+                          RU
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Rank: checkboxes, 1+ selecionáveis, cada um com filter-rank -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapse-rank" aria-expanded="false" aria-controls="collapse-rank">
+                  Rank
+                </button>
+              </h2>
+              <div id="collapse-rank" class="accordion-collapse collapse" data-bs-parent="#filterAccordion">
+                <div class="accordion-body">
+                  <div class="filter-group" data-filter-type="rank">
+                    <ul class="filter-list list-unstyled d-flex flex-wrap gap-3 mb-0 flex-md-column gap-md-2">
+                      <li>
+                        <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                          <input type="checkbox" value="S+" class="form-check-input filter-rank">
+                          S+
+                        </label>
+                      </li>
+                      <li>
+                        <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                          <input type="checkbox" value="S" class="form-check-input filter-rank">
+                          S
+                        </label>
+                      </li>
+                      <li>
+                        <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                          <input type="checkbox" value="S-" class="form-check-input filter-rank">
+                          S-
+                        </label>
+                      </li>
+                      <li>
+                        <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                          <input type="checkbox" value="A+" class="form-check-input filter-rank">
+                          A+
+                        </label>
+                      </li>
+                      <li>
+                        <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                          <input type="checkbox" value="A" class="form-check-input filter-rank">
+                          A
+                        </label>
+                      </li>
+                      <li>
+                        <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                          <input type="checkbox" value="A-" class="form-check-input filter-rank">
+                          A-
+                        </label>
+                      </li>
+                      <li>
+                        <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                          <input type="checkbox" value="B+" class="form-check-input filter-rank">
+                          B+
+                        </label>
+                      </li>
+                      <li>
+                        <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                          <input type="checkbox" value="B" class="form-check-input filter-rank">
+                          B
+                        </label>
+                      </li>
+                      <li>
+                        <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                          <input type="checkbox" value="B-" class="form-check-input filter-rank">
+                          B-
+                        </label>
+                      </li>
+                      <li>
+                        <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                          <input type="checkbox" value="C+" class="form-check-input filter-rank">
+                          C+
+                        </label>
+                      </li>
+                      <li>
+                        <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                          <input type="checkbox" value="C" class="form-check-input filter-rank">
+                          C
+                        </label>
+                      </li>
+                      <li>
+                        <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                          <input type="checkbox" value="C-" class="form-check-input filter-rank">
+                          C-
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
 
         </div>
@@ -165,6 +205,7 @@
     </div>
   </main>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../../api/data.js"></script>
   <script src="js/renderResults.js"></script>
   <script src="js/searchController.js"></script>

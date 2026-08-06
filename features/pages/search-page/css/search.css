@@ -36,16 +36,13 @@ body {
 }
 
 /* ------------------------------------------------------------
-   3) Título dos grupos de filtro
-   Apenas o tamanho da fonte, que o Bootstrap não tem utilitário
-   exato para 0.7rem. Cor e uppercase vêm do Bootstrap
-   (text-secondary + text-uppercase no HTML).
+   3) Accordion de filtros
+   Os grupos Region/Rank ficam em painéis colapsáveis. Reduzimos
+   o padding interno do accordion-body para as checkboxes ficarem
+   mais compactas dentro da sidebar.
    ------------------------------------------------------------ */
-.filter-title {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  margin-bottom: 0.9rem;
+.filter-accordion .accordion-body {
+  padding: 0.75rem;
 }
 
 /* ------------------------------------------------------------
