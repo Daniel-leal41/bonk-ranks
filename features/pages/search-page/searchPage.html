@@ -31,47 +31,108 @@
       <aside class="col-12 col-md-4 col-lg-3">
         <div class="filter-sidebar border rounded-3 p-3 bg-body-tertiary">
 
+          <!-- Região: cada checkbox carrega filter-region -->
           <div class="filter-group mb-4" data-filter-type="region">
             <h3 class="filter-title text-secondary">Region</h3>
             <ul class="filter-list list-unstyled d-flex flex-wrap gap-3 mb-0 flex-md-column gap-md-2">
               <li>
                 <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
-                  <input type="checkbox" value="BR" class="form-check-input filter-checkbox">
+                  <input type="checkbox" value="BR" class="form-check-input filter-region">
                   BR
                 </label>
               </li>
               <li>
                 <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
-                  <input type="checkbox" value="NA" class="form-check-input filter-checkbox">
+                  <input type="checkbox" value="NA" class="form-check-input filter-region">
                   NA
                 </label>
               </li>
               <li>
                 <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
-                  <input type="checkbox" value="EU" class="form-check-input filter-checkbox">
+                  <input type="checkbox" value="EU" class="form-check-input filter-region">
                   EU
                 </label>
               </li>
             </ul>
           </div>
 
-          <div class="filter-group" data-filter-type="rank">
+          <!-- Rank: agora checkboxes, 1+ selecionáveis, cada um com filter-rank -->
+          <div class="filter-group mb-4" data-filter-type="rank">
             <h3 class="filter-title text-secondary">Rank</h3>
-            <select class="form-select filter-select" id="rank-filter">
-              <option value="all">All Ranks</option>
-              <option value="S+">S+</option>
-              <option value="S">S</option>
-              <option value="S-">S-</option>
-              <option value="A+">A+</option>
-              <option value="A">A</option>
-              <option value="A-">A-</option>
-              <option value="B+">B+</option>
-              <option value="B">B</option>
-              <option value="B-">B-</option>
-              <option value="C+">C+</option>
-              <option value="C">C</option>
-              <option value="C-">C-</option>
-            </select>
+            <ul class="filter-list list-unstyled d-flex flex-wrap gap-3 mb-0 flex-md-column gap-md-2">
+              <li>
+                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                  <input type="checkbox" value="S+" class="form-check-input filter-rank">
+                  S+
+                </label>
+              </li>
+              <li>
+                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                  <input type="checkbox" value="S" class="form-check-input filter-rank">
+                  S
+                </label>
+              </li>
+              <li>
+                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                  <input type="checkbox" value="S-" class="form-check-input filter-rank">
+                  S-
+                </label>
+              </li>
+              <li>
+                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                  <input type="checkbox" value="A+" class="form-check-input filter-rank">
+                  A+
+                </label>
+              </li>
+              <li>
+                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                  <input type="checkbox" value="A" class="form-check-input filter-rank">
+                  A
+                </label>
+              </li>
+              <li>
+                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                  <input type="checkbox" value="A-" class="form-check-input filter-rank">
+                  A-
+                </label>
+              </li>
+              <li>
+                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                  <input type="checkbox" value="B+" class="form-check-input filter-rank">
+                  B+
+                </label>
+              </li>
+              <li>
+                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                  <input type="checkbox" value="B" class="form-check-input filter-rank">
+                  B
+                </label>
+              </li>
+              <li>
+                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                  <input type="checkbox" value="B-" class="form-check-input filter-rank">
+                  B-
+                </label>
+              </li>
+              <li>
+                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                  <input type="checkbox" value="C+" class="form-check-input filter-rank">
+                  C+
+                </label>
+              </li>
+              <li>
+                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                  <input type="checkbox" value="C" class="form-check-input filter-rank">
+                  C
+                </label>
+              </li>
+              <li>
+                <label class="filter-option form-check d-flex align-items-center gap-2 mb-0">
+                  <input type="checkbox" value="C-" class="form-check-input filter-rank">
+                  C-
+                </label>
+              </li>
+            </ul>
           </div>
 
         </div>
@@ -104,12 +165,9 @@
     </div>
   </main>
 
-  <!-- Dados e utilitários do projeto. Na proposta os caminhos apontam
-       para o projeto real para funcionar ao abrir; quando aplicado ao
-       site, voltam a ser ../../api/data.js e ./js/search.js -->
   <script src="../../api/data.js"></script>
-  <script src="js/search.js"></script>
-  <script src="js/renderSearch.js"></script>
+  <script src="js/renderResults.js"></script>
+  <script src="js/searchController.js"></script>
 
 </body>
 
