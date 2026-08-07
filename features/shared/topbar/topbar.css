@@ -1,0 +1,53 @@
+/* features/shared/topbar/topbar.css
+   Complementos do Bootstrap para a top bar global.
+   O Bootstrap já cobre: layout do navbar, collapse/hamburger, brand.
+   Aqui fica só o que ele não expressa. */
+
+/* Link do menu da página atual em destaque. */
+[data-site-topbar] .nav-link.active {
+  color: var(--bs-primary);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Botão de configurações — DESKTOP (md+, padrão)
+   Fica à direita da barra; o padding lateral é só espaçamento do ícone.
+   ========================================================================== */
+[data-site-topbar] .settings-trigger {
+  border: 0;
+  background: transparent;
+  padding-inline: 0.5rem;
+  color: var(--bs-secondary);
+}
+[data-site-topbar] .settings-trigger:hover {
+  color: var(--bs-primary);
+}
+
+/* ==========================================================================
+   No mobile o menu aberto vira um bloco vertical sob o hamburger;
+   um filete separa os links da linha do brand. Ícones aparecem ao lado do
+   texto (o d-flex/gap vêm das classes no próprio botão/link).
+   ========================================================================== */
+@media (max-width: 767.98px) {
+  [data-site-topbar] .navbar-collapse {
+    border-top: 1px solid var(--bs-border-color);
+    padding-block: 0.5rem;
+  }
+
+  /* Botão de configurações — MOBILE (dentro do menu).
+     No mobile o Bootstrap zera o padding horizontal dos .nav-link
+     (--bs-nav-link-padding-x: 0), então aqui o padding-inline também é 0
+     para alinhar ícone+texto com os demais itens. No desktop acima fica
+     0.5rem — cada breakpoint com seu valor, sem conflito. */
+  [data-site-topbar] .settings-trigger {
+    padding-inline: 0;
+    padding-block: 0.5rem;
+  }
+
+  /* Engrenagem no mesmo tamanho (18px) dos demais ícones do menu,
+     para o texto "Configurações" alinhar com os textos dos links. */
+  [data-site-topbar] .settings-trigger svg {
+    width: 18px;
+    height: 18px;
+  }
+}
