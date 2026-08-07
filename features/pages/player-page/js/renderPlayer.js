@@ -1,14 +1,19 @@
 // js/renderPlayer.js
-// Responsabilidade: ler o ?id= da URL, achar o jogador, exibir o perfil.
+// Responsabilidade: ler ?id= ou ?name= da URL, achar o jogador, exibir o perfil.
 
 document.addEventListener("dataReady", function () {
   var params = new URLSearchParams(window.location.search);
   var id = params.get("id");
+  var name = params.get("name");
   var container = document.getElementById("player-container");
 
   // --- ACHAR O JOGADOR ---
+  // Aceita ?id= (busca por id) ou ?name= (busca por username, case-insensitive).
+  // O ?name= é usado pela bracket page para linkar nomes de partidas ao perfil.
   var player = window.players.find(function (p) {
-    return p.id === id;
+    if (id) return p.id === id;
+    if (name) return p.username.toLowerCase() === name.toLowerCase();
+    return false;
   });
 
   if (!player) {

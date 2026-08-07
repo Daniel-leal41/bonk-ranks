@@ -1,0 +1,104 @@
+{
+  "tournaments": [
+    {
+      "id": "t1",
+      "name": "Copa Bonk de Elite - Edição de Inverno",
+      "logo": "https://placehold.co/64x64?text=CB",
+      "tier": 1,
+      "description": "O torneio mais prestigiado da comunidade, reunindo os melhores jogadores em combates diretos de eliminação única.",
+      "status": "finalizado",
+      "rounds": [
+        {
+          "roundIndex": 0,
+          "name": "Semifinais",
+          "matches": [
+            {
+              "id": "m-1-1",
+              "player1": { "name": "Skitsuna", "score": 3, "winner": true },
+              "player2": { "name": "Nauazin II", "score": 1, "winner": false }
+            },
+            {
+              "id": "m-1-2",
+              "player1": { "name": "Dorwammu", "score": 2, "winner": false },
+              "player2": { "name": "Frigo_bar", "score": 3, "winner": true }
+            }
+          ]
+        },
+        {
+          "roundIndex": 1,
+          "name": "Final",
+          "matches": [
+            {
+              "id": "m-2-1",
+              "player1": { "name": "Skitsuna", "score": 4, "winner": true },
+              "player2": { "name": "Frigo_bar", "score": 2, "winner": false }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t2",
+      "name": "Bonk Battle Royale",
+      "logo": "https://placehold.co/64x64?text=BB",
+      "tier": 2,
+      "description": "Torneio intermediário com eliminação única até a grande final. Ainda em andamento.",
+      "status": "em andamento",
+      "rounds": [
+        {
+          "roundIndex": 0,
+          "name": "Quartas de Final",
+          "matches": [
+            {
+              "id": "m-2-1",
+              "player1": { "name": "Teste", "score": 3, "winner": true },
+              "player2": { "name": "Skitsuna", "score": 1, "winner": false }
+            },
+            {
+              "id": "m-2-2",
+              "player1": { "name": "EnderCron", "score": 2, "winner": false },
+              "player2": { "name": "Nauazin II", "score": 3, "winner": true }
+            },
+            {
+              "id": "m-2-3",
+              "player1": { "name": "Dorwammu", "score": 1, "winner": false },
+              "player2": { "name": "Frigo_bar", "score": 3, "winner": true }
+            },
+            {
+              "id": "m-2-4",
+              "player1": { "name": "JoaoOnline", "score": 3, "winner": true },
+              "player2": { "name": "MariaBaller", "score": 2, "winner": false }
+            }
+          ]
+        },
+        {
+          "roundIndex": 1,
+          "name": "Semifinais",
+          "matches": [
+            {
+              "id": "m-3-1",
+              "player1": { "name": "Teste", "score": 3, "winner": true },
+              "player2": { "name": "Nauazin II", "score": 2, "winner": false }
+            },
+            {
+              "id": "m-3-2",
+              "player1": { "name": "Teste", "score": 3, "winner": true },
+              "player2": null
+            }
+          ]
+        },
+        {
+          "roundIndex": 2,
+          "name": "Final",
+          "matches": [
+            {
+              "id": "m-4-1",
+              "player1": null,
+              "player2": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

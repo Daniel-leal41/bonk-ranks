@@ -1,0 +1,39 @@
+/* tournaments.css
+   CSS complementar do que o Bootstrap já resolve na lista de torneios.
+   Cobre apenas o que o Bootstrap não expressa:
+   - body flex (empurra o conteúdo e permite main flex:1)
+   - largura máxima da barra de pesquisa
+   - badge de tier com cores exclusivas por nível
+   (o CSS do chaveamento fica na página do bracket — feature separada) */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Barra de pesquisa: não estica além de 550px em telas grandes */
+.tournaments-search {
+  max-width: 550px;
+}
+
+/* Badge de tier: cor exclusiva por nível de importância do torneio */
+.tier-badge {
+  font-weight: 600;
+}
+.tier-1 {
+  background-color: #ffd700; /* ouro: torneio principal */
+  color: #212529;
+}
+.tier-2 {
+  background-color: #c0c0c0; /* prata: intermediário */
+  color: #212529;
+}
+.tier-3 {
+  background-color: #cd7f32; /* bronze: amador */
+  color: #fff;
+}

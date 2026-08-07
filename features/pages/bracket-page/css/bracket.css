@@ -1,0 +1,100 @@
+/* bracket.css
+   CSS complementar do que o Bootstrap já resolve no chaveamento.
+   Cobre apenas o que o Bootstrap não expressa:
+   - body flex (empurra o conteúdo e permite main flex:1)
+   - badge de tier (cabeçalho do torneio)
+   - cartão de partida, slots de jogador e destaque de vencedor/perdedor
+   - conectores sutis entre rodadas (apenas no desktop)
+   (o CSS da lista de torneios fica na tournaments-page — feature separada) */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Badge de tier: cor exclusiva por nível de importância do torneio */
+.tier-badge {
+  font-weight: 600;
+}
+.tier-1 {
+  background-color: #ffd700; /* ouro: torneio principal */
+  color: #212529;
+}
+.tier-2 {
+  background-color: #c0c0c0; /* prata: intermediário */
+  color: #212529;
+}
+.tier-3 {
+  background-color: #cd7f32; /* bronze: amador */
+  color: #fff;
+}
+
+/* Colunas de rodada: largura mínima para não colapsarem na rolagem lateral */
+.bracket-round {
+  min-width: 220px;
+}
+
+/* Cartão de partida: os dois oponentes empilhados, com z-index acima das
+   linhas conectoras que passam por trás */
+.bracket-match {
+  position: relative;
+  background: var(--bs-card-bg);
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  min-width: 220px;
+  z-index: 1;
+}
+
+/* Cada linha do cartão (um jogador) */
+.bracket-slot {
+  padding: 6px 12px;
+}
+.bracket-slot + .bracket-slot {
+  border-top: 1px solid var(--bs-border-color);
+}
+
+/* Vencedor: destaque; perdedor: opacidade reduzida */
+.bracket-winner {
+  font-weight: 700;
+}
+.bracket-winner .bracket-name {
+  color: var(--bs-success);
+}
+.bracket-loser {
+  opacity: 0.55;
+}
+
+/* Pontuação com números de largura fixa evita "pulos" de layout */
+.bracket-score {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Conectores sutis entre rodadas — só no desktop, para não poluir o mobile */
+@media (min-width: 768px) {
+  /* linha saindo à direita de cada partida (exceto na final) */
+  .bracket-round:not(:last-child) .bracket-match::after {
+    content: "";
+    position: absolute;
+    right: -16px;
+    top: 50%;
+    width: 16px;
+    height: 2px;
+    background-color: var(--bs-border-color);
+  }
+
+  /* linha entrando à esquerda de cada partida (exceto na primeira rodada) */
+  .bracket-round:not(:first-child) .bracket-match::before {
+    content: "";
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    width: 16px;
+    height: 2px;
+    background-color: var(--bs-border-color);
+  }
+}
