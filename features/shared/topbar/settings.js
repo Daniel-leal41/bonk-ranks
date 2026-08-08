@@ -1,9 +1,10 @@
 // features/shared/topbar/settings.js
 // Responsabilidade: painel de configurações (offcanvas à direita). Separado do
 // topbar.js — a top bar apenas chama window.SiteSettings.open(); todo o
-// conteúdo e comportamento das configurações vivem aqui. Hoje é um
-// placeholder: as opções reais serão adicionadas neste arquivo sem tocar na
-// top bar.
+// conteúdo e comportamento das configurações vivem aqui.
+//
+// Tema: a lógica fica em features/shared/themeSwitcher.js (window.ThemeSwitcher);
+// aqui fica só a UI (switch "Modo escuro") sincronizada com ele.
 
 (function () {
   var PANEL_ID = 'settings-offcanvas';
@@ -24,10 +25,26 @@
         '<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>' +
       '</div>' +
       '<div class="offcanvas-body">' +
-        '<p class="text-muted mb-0">Em breve.</p>' +
+        '<section class="mb-3">' +
+          '<h6 class="fw-medium mb-2">Tema</h6>' +
+          '<div class="form-check form-switch">' +
+            '<input class="form-check-input" type="checkbox" role="switch" id="theme-switch">' +
+            '<label class="form-check-label" for="theme-switch">Modo escuro</label>' +
+          '</div>' +
+        '</section>' +
       '</div>';
 
     document.body.appendChild(div);
+
+    // Sincroniza o switch com o tema atual e delega a alternância ao módulo.
+    var themeSwitch = div.querySelector('#theme-switch');
+    if (window.ThemeSwitcher) {
+      themeSwitch.checked = window.ThemeSwitcher.get() === 'dark';
+      themeSwitch.addEventListener('change', function () {
+        window.ThemeSwitcher.set(themeSwitch.checked ? 'dark' : 'light');
+      });
+    }
+
     return div;
   }
 
