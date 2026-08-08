@@ -52,7 +52,7 @@
     "rank": "",
     "description": "",
     "skills": {
-       "IQ": {
+      "IQ": {
         "Consistency": 86,
         "Decision Making": 84,
         "Mechanics": 90,
@@ -96,7 +96,7 @@
     "rank": "",
     "description": "",
     "skills": {
-       "IQ": {
+      "IQ": {
         "Consistency": 86,
         "Decision Making": 90,
         "Mechanics": 90,
@@ -132,7 +132,6 @@
     }
   },
   {
-    "id": "p004",
     "avatarUrl": "https://res.cloudinary.com/dmmunstfz/image/upload/q_auto/f_auto/v1776464971/frigo_wbjjo9.png",
     "username": "Frigo_bar",
     "title": "",
@@ -140,8 +139,8 @@
     "rank": "",
     "description": "Frigo_bar is a player",
     "skills": {
-       "IQ": {
-        "Consistency": 90,
+      "IQ": {
+        "Consistency": 95,
         "Decision Making": 96,
         "Mechanics": 94,
         "Control": 95
@@ -152,9 +151,9 @@
         "Counter": 99
       },
       "Offense": {
-        "Pressure": 87,
-        "Combo": 89,
-        "Finishing": 94
+        "Pressure": 90,
+        "Combo": 90,
+        "Finishing": 95
       },
       "Core": {
         "Timing": 98,
@@ -164,7 +163,7 @@
         "Unpredictability": 88
       },
       "Mental": {
-        "Focus": 89,
+        "Focus": 95,
         "Confidence": 99,
         "Stamina": 95
       },
@@ -173,62 +172,18 @@
         "Synergy": 96,
         "luck": 85
       }
-    }
+    },
+    "id": "p004"
   },
   {
-    "id": "p006",
-    "avatarUrl": "",
-    "username": "Teste",
-    "title": "TESTE",
-    "region": "BR",
-    "rank": "TESTE",
-    "description": "Lorem ipsum dolor sit ",
-    "skills": {
-       "IQ": {
-        "Consistency": 100,
-        "Decision Making": 100,
-        "Mechanics": 100,
-        "Control": 100
-      },
-      "Defense": {
-        "Positioning": 100,
-        "Recovery": 100,
-        "Counter": 100
-      },
-      "Offense": {
-        "Pressure": 100,
-        "Combo": 100,
-        "Finishing": 100
-      },
-      "Core": {
-        "Timing": 100,
-        "Reaction": 100,
-        "Adaptability": 100,
-        "Patience": 100,
-        "Unpredictability": 100
-      },
-      "Mental": {
-        "Focus": 100,
-        "Confidence": 100,
-        "Stamina": 100
-      },
-      "Special": {
-        "Crowd Control": 100,
-        "Synergy": 100,
-        "luck": 100
-      }
-    }
-  },
-  {
-    "id": "p007",
     "avatarUrl": "https://res.cloudinary.com/dmmunstfz/image/upload/q_auto/f_auto/v1776465169/endercron_nsxb6u.png",
     "username": "EnderCron",
-    "title": "Camper",
+    "title": "",
     "region": "USA",
-    "rank": "S",
+    "rank": "",
     "description": "",
     "skills": {
-       "IQ": {
+      "IQ": {
         "Consistency": 87,
         "Decision Making": 85,
         "Mechanics": 95,
@@ -261,6 +216,311 @@
         "Synergy": 82,
         "luck": 95
       }
-    }
+    },
+    "id": "p007"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/6086614d171da0ff37f935fff2c06ce7563b1c468a157813f0a01ff2ffaf8964/image.png?size=1024",
+    "username": "purpetuity",
+    "title": "",
+    "region": "USA",
+    "rank": "",
+    "description": "",
+    "skills": {
+      "IQ": {
+        "Consistency": 91,
+        "Decision Making": 93,
+        "Mechanics": 95,
+        "Control": 92
+      },
+      "Defense": {
+        "Positioning": 89,
+        "Recovery": 93,
+        "Counter": 92
+      },
+      "Offense": {
+        "Pressure": 98,
+        "Combo": 99,
+        "Finishing": 98
+      },
+      "Core": {
+        "Timing": 97,
+        "Reaction": 98,
+        "Adaptability": 96,
+        "Patience": 96,
+        "Unpredictability": 97
+      },
+      "Mental": {
+        "Focus": 93,
+        "Confidence": 93,
+        "Stamina": 94
+      },
+      "Special": {
+        "Crowd Control": 85,
+        "Synergy": 88,
+        "luck": 90
+      }
+    },
+    "id": "p005"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/c15b0763979411b0bd82b022adacf07be907adf0f9bf09329e30a419535ca26e/image.png?size=1024",
+    "username": "cwod",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p006"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/fa5e1345d12dd84fcb022a049f9e04c21f1ee80fbe4c05f8107eb5c40a4641e6/image.png?size=1024",
+    "username": "Ozmon",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p008"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/87178225483838b87775d02215da97889688fcdff720da8b0da5bd9561e31c9e/image.png?size=1024",
+    "username": "Lexi_Bexi",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p009"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/da6a517546ea2de0ab54180bc87576814c497a1f215bb112d9bd0c7d2409db17/image.png?size=1024",
+    "username": "King_L2",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p010"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/6b42e58d462a1ee5872013f41c3d06e1c205439367a32335fe83727ebaed4103/image.png?size=1024",
+    "username": "Lightining_MQ",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p011"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/cb254ca9b559f25ce1d0d2da28c642b8fc421842eddfd174c1f59772d2741d98/image.png?size=1024",
+    "username": "TypicalHorror",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p012"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/d0522ed449bda9a73844ec7104ef1f0c5ae2dcfe57107ed6c2a88defb22f9757/image.png?size=1024",
+    "username": "Papi Trapi V2 ",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p013"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/9b3bfc5c4e562db15ed2fe50f0c41e3ee039334f59b6f04143fbb0a77a3e48cd/image.png?size=1024",
+    "username": "cuddle",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p014"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/18f96b32e488cb97b0234db1cb537016ba182e47c3c6c40bfb97a14d2b3f1afb/image.png?size=1024",
+    "username": "deathphantom666",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p015"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/09768d7fe1e703e795e4078c6235ccde844ff65c8da756b74ea89fc1eff9d5bc/image.png?size=1024",
+    "username": "siae",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p016"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/098f3bf2392d2fee24ff652dc16081cccbdc75338a53e6cef0b56a606f45d356/image.png?size=1024",
+    "username": "ClassySuit",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p017"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/e1d3b62952271a0e806998b79b0c5f3fed42f015211f9776b59b07420e7b90fe/image.png?size=1024",
+    "username": "ONTE DRAGON",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p018"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/e6150b121393d9465726a8d0b4bbbc7fa30626f24b75be5286191293a1bef0d1/image.png?size=1024",
+    "username": "Mizter_",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p019"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/b2cc4b2756ced687c21f8b8d1b9f35f31e3d3f4d292996766c4dc3b3b382d709/image.png?size=1024",
+    "username": "Shunk",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p020"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/f31484714a9fd0c4e2a99fe760ec435ac818923f6ca1084e3649284432121544/image.png?size=1024",
+    "username": "zephisdisabled",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p021"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/fb139f381d3b616dfdeac796882a1da18a648e5e3bf287dd666cd87ccbb8fa9b/image.png?size=1024",
+    "username": "Kovalent",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p022"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/577e78296571a2596fe67598891b850ef47bedd9e6268a1f37507c3382e3fbe1/image.png?size=1024",
+    "username": "Arrow God ",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p023"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/76f9365a98c41b679514f0197a756053357c4bc59c6622e08d5f773262fc26d5/image.png?size=1024",
+    "username": "Rolisang II ",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p024"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/872ce8deaa59b1dde041d4c7ada93c1329f57a0be1f615346472a410e49da4cb/image.png?size=1024",
+    "username": "Miss CircIe",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p025"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/adc51fd579572805be17b70aaff1f020bc6ea415bc2d556cd5d18507b92e690c/image.png?size=1024",
+    "username": "Jackolantern417",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p026"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/0c586867f0e0732534f1bffadff346eff486cb336658fe8fb0e93939bd39a12e/image.png?size=1024",
+    "username": "Mowes",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p027"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/deeed2adb4330bf940d38481123abd6da7c5f899e39e513c049fb51a89b0ff73/image.png?size=1024",
+    "username": "wizardlypig",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p028"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/ef1017fa120c7d2997eed78dc300b2f5c145d08040f0ea3972a7e88846fb7a98/image.png?size=1024",
+    "username": "setseed",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p029"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/cb1fc41f0f321136c4a39b6c98661afe1450e692bd1f4e829f42ad5ae6950b78/image.png?size=1024",
+    "username": "Morgan47",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p030"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/5fbf609042c78dfbca694598147611556bda8095cdbef7484ccd0169e6694780/image.png?size=1024",
+    "username": "ShutDown_",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p031"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/3be55d63a7aa664fa8f38d91b89a59fbf697062682fa4bb6b520baa73fc8e0d4/image.png?size=1024",
+    "username": "NunnaIIy",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p032"
   }
 ]
