@@ -1,7 +1,7 @@
 {
   "tournaments": [
     {
-      "name": "Wizardlypig's invitational tourney",
+      "name": "Wizardlypig's invitational",
       "logo": "https://placehold.co/512?text=WI",
       "tier": 1,
       "status": "em andamento",
@@ -15,7 +15,7 @@
               "player1": {
                 "name": "cwod",
                 "score": 3,
-                "winner": true
+                "winner": false
               },
               "player2": {
                 "name": "Ozmon",
@@ -28,7 +28,7 @@
               "player1": {
                 "name": "Lexi_Bexi",
                 "score": 3,
-                "winner": true
+                "winner": false
               },
               "player2": {
                 "name": "Lightining_MQ",
@@ -41,7 +41,7 @@
               "player1": {
                 "name": "King_L2",
                 "score": 3,
-                "winner": true
+                "winner": false
               },
               "player2": {
                 "name": "TypicalHorror",
@@ -54,7 +54,7 @@
               "player1": {
                 "name": "EnderCron",
                 "score": 3,
-                "winner": true
+                "winner": false
               },
               "player2": {
                 "name": "Papi Trapi V2",
@@ -72,7 +72,7 @@
               "player2": {
                 "name": "deathphantom666",
                 "score": 3,
-                "winner": true
+                "winner": false
               }
             },
             {
@@ -80,7 +80,7 @@
               "player1": {
                 "name": "siae",
                 "score": 3,
-                "winner": true
+                "winner": false
               },
               "player2": {
                 "name": "ClassySuit",
@@ -98,7 +98,7 @@
               "player2": {
                 "name": "TGVIN",
                 "score": 3,
-                "winner": true
+                "winner": false
               }
             },
             {
@@ -106,7 +106,7 @@
               "player1": {
                 "name": "Mizter_",
                 "score": 3,
-                "winner": true
+                "winner": false
               },
               "player2": {
                 "name": "Shunk",
@@ -124,7 +124,7 @@
               "player2": {
                 "name": "Kovalent",
                 "score": 3,
-                "winner": true
+                "winner": false
               }
             },
             {
@@ -132,7 +132,7 @@
               "player1": {
                 "name": "Arrow God",
                 "score": 3,
-                "winner": true
+                "winner": false
               },
               "player2": {
                 "name": "Rolisang II",
@@ -145,7 +145,7 @@
               "player1": {
                 "name": "Frigo_Bar",
                 "score": 3,
-                "winner": true
+                "winner": false
               },
               "player2": {
                 "name": "Miss Circle",
@@ -163,7 +163,7 @@
               "player2": {
                 "name": "Mowes",
                 "score": 3,
-                "winner": true
+                "winner": false
               }
             },
             {
@@ -171,7 +171,7 @@
               "player1": {
                 "name": "wizardlypig",
                 "score": 3,
-                "winner": true
+                "winner": false
               },
               "player2": {
                 "name": "setseed",
@@ -184,7 +184,7 @@
               "player1": {
                 "name": "Morgan47",
                 "score": 3,
-                "winner": true
+                "winner": false
               },
               "player2": {
                 "name": "ShutDown_",
@@ -202,7 +202,7 @@
               "player1": {
                 "name": "purpetuity",
                 "score": 3,
-                "winner": true
+                "winner": false
               },
               "player2": {
                 "name": "cwod",
@@ -241,7 +241,7 @@
               "player1": {
                 "name": "siae",
                 "score": 3,
-                "winner": true
+                "winner": false
               },
               "player2": {
                 "name": "TGVin",
@@ -254,7 +254,7 @@
               "player1": {
                 "name": "NunnaIIy",
                 "score": 3,
-                "winner": true
+                "winner": false
               },
               "player2": {
                 "name": "Mizter_",
@@ -267,7 +267,7 @@
               "player1": {
                 "name": "Kovalent",
                 "score": 3,
-                "winner": true
+                "winner": false
               },
               "player2": {
                 "name": "Arrow God",
@@ -280,7 +280,7 @@
               "player1": {
                 "name": "Frigo_Bar",
                 "score": 3,
-                "winner": true
+                "winner": false
               },
               "player2": {
                 "name": "Mowes",
@@ -293,7 +293,7 @@
               "player1": {
                 "name": "wizardlypig",
                 "score": 3,
-                "winner": true
+                "winner": false
               },
               "player2": {
                 "name": "Morgan47",
