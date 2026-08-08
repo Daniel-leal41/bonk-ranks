@@ -17,6 +17,7 @@
   function apply(theme) {
     document.documentElement.setAttribute('data-bs-theme', theme);
     localStorage.setItem(STORAGE_KEY, theme);
+    document.dispatchEvent(new Event('themechange'));
   }
 
   window.ThemeSwitcher = {

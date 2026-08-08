@@ -85,9 +85,21 @@ document.addEventListener("dataReady", function () {
   const transformedData = improveContrast(statsData);
 
   // --- 5. INICIAR O GRÁFICO (CHART.JS) ---
+  // Cores de traço/rótulo acompanham o tema (data-bs-theme): no claro usam
+  // preto (contraparte do branco), no escuro voltam ao branco. Sem isso os
+  // traços brancos somem no fundo claro.
+  function themeColors() {
+    var isDark = document.documentElement.getAttribute('data-bs-theme') === 'dark';
+    return {
+      grid: isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)',
+      label: isDark ? '#fff' : '#000',
+      point: isDark ? '#ffffff' : '#000000'
+    };
+  }
+
   var ctx = document.getElementById('skillsChart').getContext('2d');
 
-  new Chart(ctx, {
+  var skillsChart = new Chart(ctx, {
     type: 'radar',
     data: {
       labels: chartLabels,
@@ -95,7 +107,7 @@ document.addEventListener("dataReady", function () {
         data: transformedData,
         backgroundColor: 'rgba(99, 102, 241, 0.4)',
         borderColor: '#6366f1',
-        pointBackgroundColor: '#ffffff',
+        pointBackgroundColor: themeColors().point,
         pointBorderColor: '#6366f1',
         borderWidth: 3
       }]
@@ -106,10 +118,10 @@ document.addEventListener("dataReady", function () {
       scales: {
         r: {
           min: 0, max: 100,
-          angleLines: { color: 'rgba(255,255,255,0.1)' },
-          grid: { color: 'rgba(255,255,255,0.1)' },
+          angleLines: { color: themeColors().grid },
+          grid: { color: themeColors().grid },
           pointLabels: {
-            color: '#fff',
+            color: themeColors().label,
             font: { size: 12, weight: '600' }
           },
           ticks: { display: false }
@@ -119,6 +131,16 @@ document.addEventListener("dataReady", function () {
         legend: { display: false }
       }
     }
+  });
+
+  // Reaplica as cores quando o tema muda, sem recriar o gráfico.
+  document.addEventListener('themechange', function () {
+    var c = themeColors();
+    skillsChart.options.scales.r.angleLines.color = c.grid;
+    skillsChart.options.scales.r.grid.color = c.grid;
+    skillsChart.options.scales.r.pointLabels.color = c.label;
+    skillsChart.data.datasets[0].pointBackgroundColor = c.point;
+    skillsChart.update();
   });
 
 });
