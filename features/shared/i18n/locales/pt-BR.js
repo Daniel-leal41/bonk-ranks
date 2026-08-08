@@ -1,0 +1,64 @@
+// features/shared/i18n/locales/pt-BR.js
+// Dicionário pt-BR (idioma padrão/fallback).
+// Chaves planas por contexto; qualquer idioma ativo sem uma chave cai aqui.
+// Carregado via <script> no <head>, SEMPRE antes de i18n.js.
+
+window.SiteI18nLocales = window.SiteI18nLocales || {};
+window.SiteI18nLocales['pt-BR'] = {
+  'home.avatarAlt': 'Avatar Dinâmico',
+  'home.tagline1': 'O lugar para',
+  'home.tagline2': 'buscar jogadores',
+  'home.tagline3': 'no Bonk.io',
+  'home.subtitle': 'Descubra, compare, acompanhe e se divirta!',
+  'home.searchPlaceholder': 'Digite o nome do jogador...',
+  'home.browseAll': 'Buscar todos os jogadores',
+
+  'nav.home': 'Início',
+  'nav.search': 'Buscar',
+  'nav.tournaments': 'Torneios',
+  'nav.openMenu': 'Abrir menu',
+  'nav.settings': 'Configurações',
+  'nav.brandAlt': 'Logo BonkRANKS',
+
+  'settings.title': 'Configurações',
+  'settings.close': 'Fechar',
+  'settings.theme': 'Tema',
+  'settings.darkMode': 'Modo escuro',
+  'settings.language': 'Idioma',
+
+  'search.title': 'Resultados — BonkRANKS',
+  'search.filterRegion': 'Região',
+  'search.filterRank': 'Rank',
+  'search.placeholder': 'Nova busca...',
+  'results.empty': 'Nenhum jogador encontrado.',
+
+  'player.title': 'Perfil — BonkRANKS',
+  'player.notFound': 'Jogador não encontrado.',
+  'player.region': 'Região:',
+  'player.unknownRegion': 'Desconhecida',
+  'player.rankLabel': 'RANK',
+  'player.na': 'N/A',
+  'player.description': 'Descrição',
+  'player.noDescription': 'sem nada para mostrar por enquanto...',
+
+  'tournaments.title': 'Torneios — BonkRANKS',
+  'tournaments.heading': 'Torneios',
+  'tournaments.searchPlaceholder': 'Buscar torneio pelo nome...',
+  'tournaments.clearSearch': 'Limpar busca',
+  'tournaments.empty': 'Nenhum torneio encontrado.',
+  'tournaments.status.finished': 'Finalizado',
+  'tournaments.status.ongoing': 'Em andamento',
+
+  'bracket.title': 'Chaveamento — BonkRANKS',
+  'bracket.backToTournaments': '← Voltar para Torneios',
+  'bracket.tbd': 'A definir',
+  'bracket.notFound': 'Torneio não encontrado.',
+  'bracket.genericRound': 'Rodada',
+  'bracket.round.0': 'Final',
+  'bracket.round.1': 'Semifinais',
+  'bracket.round.2': 'Quartas de Final',
+  'bracket.round.3': 'Oitavas de Final',
+  'bracket.round.4': 'Dezesseis Avos',
+  'bracket.round.5': 'Trinta e Dois Avos',
+  'bracket.round.6': 'Sessenta e Quatro Avos'
+};

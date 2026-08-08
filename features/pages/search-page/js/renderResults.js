@@ -6,7 +6,8 @@
 
 window.renderResults = function (results, container) {
   if (results.length === 0) {
-    container.innerHTML = '<p class="player-not-found">Nenhum jogador encontrado.</p>';
+    var empty = window.SiteI18n ? window.SiteI18n.t('results.empty') : 'results.empty';
+    container.innerHTML = '<p class="player-not-found">' + empty + '</p>';
     return;
   }
 

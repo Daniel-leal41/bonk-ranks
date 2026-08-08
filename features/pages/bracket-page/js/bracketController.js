@@ -8,20 +8,24 @@
 document.addEventListener("tournamentsDataReady", function () {
   var params = new URLSearchParams(window.location.search);
   var id = params.get("id");
+  var headerEl = document.getElementById("bracket-header");
+  var bracketEl = document.getElementById("bracket-container");
 
-  var tournament = window.tournaments.tournaments.find(function (t) {
-    return t.id === id;
-  });
+  function render() {
+    var tournament = window.tournaments.tournaments.find(function (t) {
+      return t.id === id;
+    });
 
-  if (!tournament) {
-    document.getElementById("bracket-header").innerHTML =
-      '<p class="text-secondary">Torneio não encontrado.</p>';
-    return;
+    if (!tournament) {
+      headerEl.innerHTML = '<p class="text-secondary">' + window.SiteI18n.t('bracket.notFound') + '</p>';
+      return;
+    }
+
+    window.renderTournamentBracket(tournament, headerEl, bracketEl);
   }
 
-  window.renderTournamentBracket(
-    tournament,
-    document.getElementById("bracket-header"),
-    document.getElementById("bracket-container")
-  );
+  render();
+
+  // Re-renderiza ao trocar de idioma (labels de status e "A definir").
+  document.addEventListener('localeChanged', render);
 });

@@ -2,16 +2,18 @@
 // Responsabilidade: renderizar os cards da lista de torneios.
 // Não orquestra navegação; recebe os torneios já filtrados e o container.
 // Cada card inteiro é um link para o chaveamento do torneio (?id=).
-// Só roda em tournaments.html.
+// Só roda em tournaments.html. Textos via i18n (window.SiteI18n.t).
 
 window.renderTournamentList = function (tournaments, container) {
   if (!tournaments || tournaments.length === 0) {
-    container.innerHTML = '<p class="text-secondary">Nenhum torneio encontrado.</p>';
+    container.innerHTML = '<p class="text-secondary">' + window.SiteI18n.t('tournaments.empty') + '</p>';
     return;
   }
 
   container.innerHTML = tournaments.map(function (t) {
-    var statusLabel = t.status === "finalizado" ? "Finalizado" : "Em andamento";
+    var statusLabel = t.status === "finalizado"
+      ? window.SiteI18n.t('tournaments.status.finished')
+      : window.SiteI18n.t('tournaments.status.ongoing');
     var statusClass = t.status === "finalizado" ? "text-bg-success" : "text-bg-warning text-dark";
 
     return `

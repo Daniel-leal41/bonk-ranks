@@ -7,7 +7,9 @@
 // Só roda em bracketPage.html.
 
 window.renderTournamentBracket = function (tournament, headerEl, bracketEl) {
-  var statusLabel = tournament.status === "finalizado" ? "Finalizado" : "Em andamento";
+  var statusLabel = tournament.status === "finalizado"
+    ? window.SiteI18n.t('tournaments.status.finished')
+    : window.SiteI18n.t('tournaments.status.ongoing');
   var statusClass = tournament.status === "finalizado" ? "text-bg-success" : "text-bg-warning text-dark";
 
   // Cabeçalho do torneio
@@ -23,6 +25,21 @@ window.renderTournamentBracket = function (tournament, headerEl, bracketEl) {
     <p class="text-secondary mb-0">${tournament.description}</p>
   `;
 
+  // Título da rodada calculado a partir da distância da final:
+  // (N - 1) - roundIndex → 0 = Final, 1 = Semifinais, 2 = Quartas, ...
+  // Nomes vêm do dicionário i18n (bracket.round.N); se a distância passar das
+  // chaves definidas, usa um genérico "Rodada/Round N".
+  var totalRounds = tournament.rounds.length;
+  function roundTitle(round) {
+    var fromFinal = totalRounds - 1 - round.roundIndex;
+    var key = 'bracket.round.' + fromFinal;
+    var label = window.SiteI18n.t(key);
+    if (label === key) {
+      label = window.SiteI18n.t('bracket.genericRound') + ' ' + (fromFinal + 1);
+    }
+    return label;
+  }
+
   // Colunas de rodadas. Cada coluna tem o título (fora do fluxo flex) e o
   // bloco de partidas com justify-content-around: o navegador distribui as
   // partidas uniformemente e a partida da rodada seguinte fica automaticamente
@@ -33,7 +50,7 @@ window.renderTournamentBracket = function (tournament, headerEl, bracketEl) {
     return `
       <div class="bracket-round d-flex flex-column">
         <div class="bracket-round-title text-center text-secondary small text-uppercase fw-bold mb-2">
-          ${round.name}
+          ${roundTitle(round)}
         </div>
         <div class="bracket-round-matches d-flex flex-column justify-content-around flex-fill">
           ${matches}
@@ -54,12 +71,12 @@ function buildMatch(match) {
 }
 
 // Um slot = nome + pontuação. Vencedor destaca, perdedor fica apagado.
-// player pode ser null (partida ainda não definida) → placeholder "A definir".
+// player pode ser null (partida ainda não definida) → placeholder "A definir" (i18n).
 function buildSlot(player) {
   if (!player || !player.name) {
     return `
       <div class="bracket-slot d-flex justify-content-between align-items-center text-secondary">
-        <span>A definir</span>
+        <span>${window.SiteI18n.t('bracket.tbd')}</span>
       </div>
     `;
   }

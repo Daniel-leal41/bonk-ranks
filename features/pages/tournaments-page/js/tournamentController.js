@@ -35,4 +35,7 @@ document.addEventListener("tournamentsDataReady", function () {
   });
 
   updateDisplay();
+
+  // Re-renderiza ao trocar de idioma (estado vazio e labels de status).
+  document.addEventListener('localeChanged', updateDisplay);
 });

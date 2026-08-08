@@ -46,11 +46,18 @@
       ' stroke-linecap="round" stroke-linejoin="round">' + icon + '</svg>';
   }
 
+  // Resolve strings do menu via i18n (features/shared/i18n/i18n.js), carregado
+  // no <head> de todas as páginas. Sem SiteI18n, devolve a própria chave.
+  function t(key) {
+    return window.SiteI18n ? window.SiteI18n.t(key) : key;
+  }
+
   // <-- Edite aqui para mudar o menu global
+  // labelKey aponta para uma chave do dicionário i18n (nav.*) — não traduzir aqui.
   var LINKS = [
-    { href: 'index.html', label: 'Início', icon: 'home' },
-    { href: 'features/pages/search-page/searchPage.html', label: 'Buscar', icon: 'search' },
-    { href: 'features/pages/tournaments-page/tournaments.html', label: 'Torneios', icon: 'trophy' }
+    { href: 'index.html', labelKey: 'nav.home', icon: 'home' },
+    { href: 'features/pages/search-page/searchPage.html', labelKey: 'nav.search', icon: 'search' },
+    { href: 'features/pages/tournaments-page/tournaments.html', labelKey: 'nav.tournaments', icon: 'trophy' }
   ];
 
   var LOGO_URL = 'https://res.cloudinary.com/dmmunstfz/image/upload/q_auto/f_auto/v1776456354/BonkRankLogo_tbhxaw.png';
@@ -63,7 +70,7 @@
         '<a class="nav-link d-flex align-items-center gap-2' + (active ? ' active' : '') + '"' +
         (active ? ' aria-current="page"' : '') +
         ' href="' + pre + l.href + '">' +
-          '<span class="d-md-none">' + svg(ICONS[l.icon]) + '</span>' + l.label +
+          '<span class="d-md-none">' + svg(ICONS[l.icon]) + '</span>' + t(l.labelKey) +
         '</a>' +
         '</li>';
     }).join('');
@@ -77,37 +84,45 @@
       el.innerHTML =
         '<div class="container">' +
           '<a class="navbar-brand d-flex align-items-center gap-2" href="' + pre + 'index.html">' +
-            '<img class="rounded-circle" src="' + LOGO_URL + '" width="36" height="36" alt="Logo BonkRANKS">' +
+            '<img class="rounded-circle" src="' + LOGO_URL + '" width="36" height="36" alt="' + t('nav.brandAlt') + '">' +
             '<span class="fw-bold">BonkRANKS</span>' +
           '</a>' +
 
           '<button class="navbar-toggler" type="button" data-bs-toggle="collapse"' +
             ' data-bs-target="#siteTopNav" aria-controls="siteTopNav"' +
-            ' aria-expanded="false" aria-label="Abrir menu">' +
+            ' aria-expanded="false" aria-label="' + t('nav.openMenu') + '">' +
             '<span class="navbar-toggler-icon"></span>' +
           '</button>' +
 
           '<div class="collapse navbar-collapse" id="siteTopNav">' +
-            '<ul class="navbar-nav ms-auto align-items-lg-center">' + buildMenu(pre) + '</ul>' 
+            '<ul class="navbar-nav ms-auto align-items-lg-center">' + buildMenu(pre) + '</ul>'
             +
 
-            '<button class="settings-trigger btn d-flex align-items-center gap-2" type="button" aria-label="Configurações">' +
+            '<button class="settings-trigger btn d-flex align-items-center gap-2" type="button" aria-label="' + t('nav.settings') + '">' +
               svg(ICONS.gear, 22) +
-              '<span class="d-md-none">Configurações</span>' +
+              '<span class="d-md-none">' + t('nav.settings') + '</span>' +
             '</button>' +
           '</div>' +
         '</div>';
     }
   };
 
-  // Script no fim do body: o placeholder já existe quando este código roda.
-  var host = document.querySelector('[data-site-topbar]');
-  if (host) {
+  // Renderiza a topbar e re-ancora o clique da engrenagem. Re-executada a cada
+  // mudança de idioma (localeChanged) para os labels acompanharem o locale.
+  function render() {
+    var host = document.querySelector('[data-site-topbar]');
+    if (!host) return;
     window.SiteTopbar.build(host);
     host.querySelector('.settings-trigger').addEventListener('click', function () {
       if (window.SiteSettings && typeof window.SiteSettings.open === 'function') {
         window.SiteSettings.open();
       }
     });
+  }
+
+  // Script no fim do body: o placeholder já existe quando este código roda.
+  render();
+  if (window.SiteI18n) {
+    document.addEventListener('localeChanged', render);
   }
 })();

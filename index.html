@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="./features/shared/topbar/topbar.css">
   <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dmmunstfz/image/upload/q_auto/f_auto/v1776456354/BonkRankLogo_tbhxaw.png">
   <script src="./features/shared/themeSwitcher.js"></script>
+  <script src="./features/shared/i18n/locales/pt-BR.js"></script>
+  <script src="./features/shared/i18n/locales/en.js"></script>
+  <script src="./features/shared/i18n/i18n.js"></script>
 </head>
 
 <body>
@@ -18,16 +21,14 @@
 
   <main class="home-wrapper d-flex align-items-center justify-content-center py-5">
     <div class="container text-center home-content">
-      <img id="dynamic-avatar" class="big-avatar" src="https://res.cloudinary.com/dmmunstfz/image/upload/q_auto/f_auto/v1776456354/BonkRankLogo_tbhxaw.png" alt="Avatar Dinâmico">
+      <img id="dynamic-avatar" class="big-avatar" src="https://res.cloudinary.com/dmmunstfz/image/upload/q_auto/f_auto/v1776456354/BonkRankLogo_tbhxaw.png" alt="" data-i18n-alt="home.avatarAlt">
 
       <h1 class="home-title fw-bold mb-3">
-        O lugar  para<br>
-        <span id="dynamic-word" class="text-primary">buscar jogadores</span><br>
-        no Bonk.io
+        <span data-i18n="home.tagline1"></span><br>
+        <span id="dynamic-word" class="text-primary" data-i18n="home.tagline2"></span><br>
+        <span data-i18n="home.tagline3"></span>
       </h1>
-      <p class="lead text-muted mb-4">
-        Descubra, compare, acompanhe e se divirta!
-      </p>
+      <p class="lead text-muted mb-4" data-i18n="home.subtitle"></p>
 
       <form action="./features/pages/search-page/searchPage.html" method="get" class="home-form mx-auto">
         <div class="input-group">
@@ -37,13 +38,11 @@
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
           </span>
-          <input type="text" name="q" class="form-control form-control-lg" placeholder="Digite o nome do jogador..." autocomplete="off" required>
+          <input type="text" name="q" class="form-control form-control-lg" data-i18n-placeholder="home.searchPlaceholder" autocomplete="off" required>
         </div>
       </form>
 
-      <a href="./features/pages/search-page/searchPage.html" class="btn btn-outline-primary btn-lg mt-4">
-        Buscar todos os jogadores
-      </a>
+      <a href="./features/pages/search-page/searchPage.html" class="btn btn-outline-primary btn-lg mt-4" data-i18n="home.browseAll"></a>
 
     </div>
   </main>

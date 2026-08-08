@@ -71,4 +71,7 @@ document.addEventListener("dataReady", function () {
 
   // Execução inicial
   updateDisplay();
+
+  // Re-renderiza ao trocar de idioma (estado vazio e resultados).
+  document.addEventListener('localeChanged', updateDisplay);
 });

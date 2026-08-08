@@ -1,0 +1,64 @@
+// features/shared/i18n/locales/en.js
+// Dicionário inglês (primeiro idioma adicional).
+// Carregado via <script> no <head>, SEMPRE antes de i18n.js.
+// Chaves ausentes aqui caem no fallback pt-BR (i18n.js).
+
+window.SiteI18nLocales = window.SiteI18nLocales || {};
+window.SiteI18nLocales['en'] = {
+  'home.avatarAlt': 'Dynamic Avatar',
+  'home.tagline1': 'The place to',
+  'home.tagline2': 'search players',
+  'home.tagline3': 'on Bonk.io',
+  'home.subtitle': 'Discover, compare, follow and have fun!',
+  'home.searchPlaceholder': "Type the player's name...",
+  'home.browseAll': 'Browse all players',
+
+  'nav.home': 'Home',
+  'nav.search': 'Search',
+  'nav.tournaments': 'Tournaments',
+  'nav.openMenu': 'Open menu',
+  'nav.settings': 'Settings',
+  'nav.brandAlt': 'BonkRANKS logo',
+
+  'settings.title': 'Settings',
+  'settings.close': 'Close',
+  'settings.theme': 'Theme',
+  'settings.darkMode': 'Dark mode',
+  'settings.language': 'Language',
+
+  'search.title': 'Results — BonkRANKS',
+  'search.filterRegion': 'Region',
+  'search.filterRank': 'Rank',
+  'search.placeholder': 'New search...',
+  'results.empty': 'No players found.',
+
+  'player.title': 'Profile — BonkRANKS',
+  'player.notFound': 'Player not found.',
+  'player.region': 'Region:',
+  'player.unknownRegion': 'Unknown',
+  'player.rankLabel': 'RANK',
+  'player.na': 'N/A',
+  'player.description': 'Description',
+  'player.noDescription': 'nothing to show yet...',
+
+  'tournaments.title': 'Tournaments — BonkRANKS',
+  'tournaments.heading': 'Tournaments',
+  'tournaments.searchPlaceholder': 'Search tournaments by name...',
+  'tournaments.clearSearch': 'Clear search',
+  'tournaments.empty': 'No tournaments found.',
+  'tournaments.status.finished': 'Finished',
+  'tournaments.status.ongoing': 'Ongoing',
+
+  'bracket.title': 'Bracket — BonkRANKS',
+  'bracket.backToTournaments': '← Back to Tournaments',
+  'bracket.tbd': 'TBD',
+  'bracket.notFound': 'Tournament not found.',
+  'bracket.genericRound': 'Round',
+  'bracket.round.0': 'Final',
+  'bracket.round.1': 'Semifinals',
+  'bracket.round.2': 'Quarterfinals',
+  'bracket.round.3': 'Round of 16',
+  'bracket.round.4': 'Round of 32',
+  'bracket.round.5': 'Round of 64',
+  'bracket.round.6': 'Round of 128'
+};
