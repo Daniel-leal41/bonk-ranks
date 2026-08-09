@@ -76,7 +76,7 @@ document.addEventListener("dataReady", function () {
 
     // --- 3. COLORIR O RANK ---
     var rankEl = container.querySelector('.profile-rank');
-    applyRankColor(rankEl, player.rank);
+    window.RankColors.applyRankColor(rankEl, player.rank);
 
     // --- 4. PREPARAR DADOS DO GRÁFICO ---
     // Nomes das categorias mantidos em inglês nos dois idiomas (decisão de i18n).
