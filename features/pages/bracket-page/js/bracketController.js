@@ -11,13 +11,18 @@ document.addEventListener("tournamentsDataReady", function () {
   var headerEl = document.getElementById("bracket-header");
   var bracketEl = document.getElementById("bracket-container");
 
+  // Resolve strings via i18n. Sem SiteI18n, devolve a própria chave.
+  function t(key) {
+    return window.SiteI18n ? window.SiteI18n.t(key) : key;
+  }
+
   function render() {
     var tournament = window.tournaments.tournaments.find(function (t) {
       return t.id === id;
     });
 
     if (!tournament) {
-      headerEl.innerHTML = '<p class="text-secondary">' + window.SiteI18n.t('bracket.notFound') + '</p>';
+      headerEl.innerHTML = '<p class="text-secondary">' + t('bracket.notFound') + '</p>';
       return;
     }
 

@@ -7,10 +7,15 @@
 // o nome é texto sem link.
 // Só roda em bracketPage.html.
 
+// Resolve strings via i18n. Sem SiteI18n, devolve a própria chave.
+function t(key) {
+  return window.SiteI18n ? window.SiteI18n.t(key) : key;
+}
+
 window.renderTournamentBracket = function (tournament, headerEl, bracketEl) {
   var statusLabel = tournament.status === "finalizado"
-    ? window.SiteI18n.t('tournaments.status.finished')
-    : window.SiteI18n.t('tournaments.status.ongoing');
+    ? t('tournaments.status.finished')
+    : t('tournaments.status.ongoing');
   var statusClass = tournament.status === "finalizado" ? "text-bg-success" : "text-bg-warning text-dark";
 
   // Cabeçalho do torneio
@@ -34,9 +39,9 @@ window.renderTournamentBracket = function (tournament, headerEl, bracketEl) {
   function roundTitle(round) {
     var fromFinal = totalRounds - 1 - round.roundIndex;
     var key = 'bracket.round.' + fromFinal;
-    var label = window.SiteI18n.t(key);
+    var label = t(key);
     if (label === key) {
-      label = window.SiteI18n.t('bracket.genericRound') + ' ' + (fromFinal + 1);
+      label = t('bracket.genericRound') + ' ' + (fromFinal + 1);
     }
     return label;
   }
@@ -77,7 +82,7 @@ function buildSlot(player) {
   if (!player || !player.name) {
     return `
       <div class="bracket-slot d-flex justify-content-between align-items-center text-secondary">
-        <span>${window.SiteI18n.t('bracket.tbd')}</span>
+        <span>${t('bracket.tbd')}</span>
       </div>
     `;
   }
