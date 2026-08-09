@@ -1,6 +1,5 @@
 [
   {
-    "id": "p001",
     "avatarUrl": "https://res.cloudinary.com/dmmunstfz/image/upload/q_auto/f_auto/v1776465191/skit_d43qjn.png",
     "username": "Skitsuna",
     "title": "",
@@ -41,7 +40,8 @@
         "Synergy": 90,
         "luck": 93
       }
-    }
+    },
+    "id": "p001"
   },
   {
     "id": "p002",
@@ -522,5 +522,15 @@
     "description": "",
     "skills": {},
     "id": "p032"
+  },
+  {
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/5054b6c19f3f317b327470ef7d0d392146ce96b45fe2ca76cf236bcb729f2620/image.png?size=1024",
+    "username": "ClassicGuy",
+    "title": "",
+    "region": "",
+    "rank": "",
+    "description": "",
+    "skills": {},
+    "id": "p033"
   }
 ]

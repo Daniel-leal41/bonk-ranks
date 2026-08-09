@@ -16,7 +16,7 @@
                 "id": "p006",
                 "name": "cwod",
                 "score": 3,
-                "winner": false
+                "winner": true
               },
               "player2": {
                 "id": "p008",
@@ -31,7 +31,7 @@
                 "id": "p009",
                 "name": "Lexi_Bexi",
                 "score": 3,
-                "winner": false
+                "winner": true
               },
               "player2": {
                 "id": "p011",
@@ -46,7 +46,7 @@
                 "id": "p010",
                 "name": "King_L2",
                 "score": 3,
-                "winner": false
+                "winner": true
               },
               "player2": {
                 "id": "p012",
@@ -61,7 +61,7 @@
                 "id": "p007",
                 "name": "EnderCron",
                 "score": 3,
-                "winner": false
+                "winner": true
               },
               "player2": {
                 "id": "p013",
@@ -82,7 +82,7 @@
                 "id": "p015",
                 "name": "deathphantom666",
                 "score": 3,
-                "winner": false
+                "winner": true
               }
             },
             {
@@ -91,7 +91,7 @@
                 "id": "p016",
                 "name": "siae",
                 "score": 3,
-                "winner": false
+                "winner": true
               },
               "player2": {
                 "id": "p017",
@@ -109,9 +109,10 @@
                 "winner": false
               },
               "player2": {
-                "name": "TGVIN",
+                "id": "p033",
+                "name": "ClassicGuy",
                 "score": 3,
-                "winner": false
+                "winner": true
               }
             },
             {
@@ -120,7 +121,7 @@
                 "id": "p019",
                 "name": "Mizter_",
                 "score": 3,
-                "winner": false
+                "winner": true
               },
               "player2": {
                 "id": "p020",
@@ -141,7 +142,7 @@
                 "id": "p022",
                 "name": "Kovalent",
                 "score": 3,
-                "winner": false
+                "winner": true
               }
             },
             {
@@ -150,7 +151,7 @@
                 "id": "p023",
                 "name": "Arrow God",
                 "score": 3,
-                "winner": false
+                "winner": true
               },
               "player2": {
                 "id": "p024",
@@ -165,11 +166,11 @@
                 "id": "p004",
                 "name": "Frigo_Bar",
                 "score": 3,
-                "winner": false
+                "winner": true
               },
               "player2": {
                 "id": "p025",
-                "name": "Miss Circle",
+                "name": "Miss CircIe",
                 "score": 0,
                 "winner": false
               }
@@ -186,7 +187,7 @@
                 "id": "p027",
                 "name": "Mowes",
                 "score": 3,
-                "winner": false
+                "winner": true
               }
             },
             {
@@ -195,7 +196,7 @@
                 "id": "p028",
                 "name": "wizardlypig",
                 "score": 3,
-                "winner": false
+                "winner": true
               },
               "player2": {
                 "id": "p029",
@@ -210,7 +211,7 @@
                 "id": "p030",
                 "name": "Morgan47",
                 "score": 3,
-                "winner": false
+                "winner": true
               },
               "player2": {
                 "id": "p031",
@@ -230,7 +231,7 @@
                 "id": "p005",
                 "name": "purpetuity",
                 "score": 3,
-                "winner": false
+                "winner": true
               },
               "player2": {
                 "id": "p006",
@@ -275,10 +276,11 @@
                 "id": "p016",
                 "name": "siae",
                 "score": 3,
-                "winner": false
+                "winner": true
               },
               "player2": {
-                "name": "TGVin",
+                "id": "p033",
+                "name": "ClassicGuy",
                 "score": 0,
                 "winner": false
               }
@@ -289,7 +291,7 @@
                 "id": "p032",
                 "name": "NunnaIIy",
                 "score": 3,
-                "winner": false
+                "winner": true
               },
               "player2": {
                 "id": "p019",
@@ -304,7 +306,7 @@
                 "id": "p022",
                 "name": "Kovalent",
                 "score": 3,
-                "winner": false
+                "winner": true
               },
               "player2": {
                 "id": "p023",
@@ -319,7 +321,7 @@
                 "id": "p004",
                 "name": "Frigo_Bar",
                 "score": 3,
-                "winner": false
+                "winner": true
               },
               "player2": {
                 "id": "p027",
@@ -334,7 +336,7 @@
                 "id": "p028",
                 "name": "wizardlypig",
                 "score": 3,
-                "winner": false
+                "winner": true
               },
               "player2": {
                 "id": "p030",
