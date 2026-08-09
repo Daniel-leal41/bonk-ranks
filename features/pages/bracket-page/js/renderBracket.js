@@ -3,7 +3,8 @@
 // (cabeçalho do torneio + colunas de rodadas).
 // Não orquestra navegação; recebe o torneio e os containers.
 // Nomes de jogadores são clicáveis e vão DIRETO para a página de perfil
-// via playerPage.html?name=<nome> (a player page busca por username).
+// via playerPage.html?id=<id> quando o slot tem id (players.json); sem id,
+// o nome é texto sem link.
 // Só roda em bracketPage.html.
 
 window.renderTournamentBracket = function (tournament, headerEl, bracketEl) {
@@ -86,13 +87,15 @@ function buildSlot(player) {
 
   return `
     <div class="bracket-slot d-flex justify-content-between align-items-center ${cls}">
-      <span class="bracket-name text-truncate">${linkPlayer(player.name)}</span>
+      <span class="bracket-name text-truncate">${linkPlayer(player)}</span>
       <span class="bracket-score">${score}</span>
     </div>
   `;
 }
 
-// Nome clicável: vai direto ao perfil com a query do nome
-function linkPlayer(name) {
-  return `<a class="text-decoration-none" href="../player-page/playerPage.html?name=${encodeURIComponent(name)}">${name}</a>`;
+// Nome do slot: linka ao perfil pelo ID (players.json) quando o slot tem id;
+// sem id (ex.: "A definir" ou partida sem identidade), renderiza texto sem link.
+function linkPlayer(player) {
+  if (!player.id) return player.name;
+  return `<a class="text-decoration-none" href="../player-page/playerPage.html?id=${player.id}">${player.name}</a>`;
 }

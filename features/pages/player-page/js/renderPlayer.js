@@ -1,12 +1,11 @@
 // js/renderPlayer.js
-// Responsabilidade: ler ?id= ou ?name= da URL, achar o jogador, exibir o perfil.
+// Responsabilidade: ler ?id= da URL, achar o jogador, exibir o perfil.
 // Re-renderiza a cada mudança de idioma (localeChanged): o Chart anterior é
 // destruído antes de recriar o radar com o novo idioma.
 
 document.addEventListener("dataReady", function () {
   var params = new URLSearchParams(window.location.search);
   var id = params.get("id");
-  var name = params.get("name");
   var container = document.getElementById("player-container");
   var chartInstance = null;
 
@@ -24,12 +23,9 @@ document.addEventListener("dataReady", function () {
     }
 
     // --- ACHAR O JOGADOR ---
-    // Aceita ?id= (busca por id) ou ?name= (busca por username, case-insensitive).
-    // O ?name= é usado pela bracket page para linkar nomes de partidas ao perfil.
+    // Busca por ?id= (usado pela search-page e pela bracket-page via id).
     var player = window.players.find(function (p) {
-      if (id) return p.id === id;
-      if (name) return p.username.toLowerCase() === name.toLowerCase();
-      return false;
+      return id && p.id === id;
     });
 
     if (!player) {
