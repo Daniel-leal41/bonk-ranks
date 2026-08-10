@@ -12,6 +12,10 @@ window.SiteI18nLocales['pt-BR'] = {
   'home.subtitle': 'Descubra, compare, acompanhe e se divirta!',
   'home.searchPlaceholder': 'Digite o nome do jogador...',
   'home.browseAll': 'Buscar todos os jogadores',
+  'home.word.1': 'buscar',
+  'home.word.2': 'comparar',
+  'home.word.3': 'acompanhar',
+  'home.word.4': 'se divertir',
 
   'nav.home': 'Início',
   'nav.search': 'Buscar',
@@ -26,13 +30,13 @@ window.SiteI18nLocales['pt-BR'] = {
   'settings.darkMode': 'Modo escuro',
   'settings.language': 'Idioma',
 
-  'search.title': 'Resultados — BonkRANKS',
+  'search.title': 'Resultados - BonkRANKS',
   'search.filterRegion': 'Região',
   'search.filterRank': 'Rank',
   'search.placeholder': 'Nova busca...',
   'results.empty': 'Nenhum jogador encontrado.',
 
-  'player.title': 'Perfil — BonkRANKS',
+  'player.title': 'Perfil - BonkRANKS',
   'player.notFound': 'Jogador não encontrado.',
   'player.region': 'Região:',
   'player.unknownRegion': 'Desconhecida',
@@ -41,7 +45,7 @@ window.SiteI18nLocales['pt-BR'] = {
   'player.description': 'Descrição',
   'player.noDescription': 'sem nada para mostrar por enquanto...',
 
-  'tournaments.title': 'Torneios — BonkRANKS',
+  'tournaments.title': 'Torneios - BonkRANKS',
   'tournaments.heading': 'Torneios',
   'tournaments.searchPlaceholder': 'Buscar torneio pelo nome...',
   'tournaments.clearSearch': 'Limpar busca',
@@ -49,7 +53,7 @@ window.SiteI18nLocales['pt-BR'] = {
   'tournaments.status.finished': 'Finalizado',
   'tournaments.status.ongoing': 'Em andamento',
 
-  'bracket.title': 'Chaveamento — BonkRANKS',
+  'bracket.title': 'Chaveamento - BonkRANKS',
   'bracket.backToTournaments': '← Voltar para Torneios',
   'bracket.tbd': 'A definir',
   'bracket.notFound': 'Torneio não encontrado.',

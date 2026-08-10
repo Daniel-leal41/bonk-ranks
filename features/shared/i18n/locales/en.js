@@ -12,6 +12,10 @@ window.SiteI18nLocales['en'] = {
   'home.subtitle': 'Discover, compare, follow and have fun!',
   'home.searchPlaceholder': "Type the player's name...",
   'home.browseAll': 'Browse all players',
+  'home.word.1': 'search',
+  'home.word.2': 'compare',
+  'home.word.3': 'follow',
+  'home.word.4': 'have fun',
 
   'nav.home': 'Home',
   'nav.search': 'Search',
@@ -26,13 +30,13 @@ window.SiteI18nLocales['en'] = {
   'settings.darkMode': 'Dark mode',
   'settings.language': 'Language',
 
-  'search.title': 'Results — BonkRANKS',
+  'search.title': 'Results - BonkRANKS',
   'search.filterRegion': 'Region',
   'search.filterRank': 'Rank',
   'search.placeholder': 'New search...',
   'results.empty': 'No players found.',
 
-  'player.title': 'Profile — BonkRANKS',
+  'player.title': 'Profile - BonkRANKS',
   'player.notFound': 'Player not found.',
   'player.region': 'Region:',
   'player.unknownRegion': 'Unknown',
@@ -41,7 +45,7 @@ window.SiteI18nLocales['en'] = {
   'player.description': 'Description',
   'player.noDescription': 'nothing to show yet...',
 
-  'tournaments.title': 'Tournaments — BonkRANKS',
+  'tournaments.title': 'Tournaments - BonkRANKS',
   'tournaments.heading': 'Tournaments',
   'tournaments.searchPlaceholder': 'Search tournaments by name...',
   'tournaments.clearSearch': 'Clear search',
@@ -49,7 +53,7 @@ window.SiteI18nLocales['en'] = {
   'tournaments.status.finished': 'Finished',
   'tournaments.status.ongoing': 'Ongoing',
 
-  'bracket.title': 'Bracket — BonkRANKS',
+  'bracket.title': 'Bracket - BonkRANKS',
   'bracket.backToTournaments': '← Back to Tournaments',
   'bracket.tbd': 'TBD',
   'bracket.notFound': 'Tournament not found.',

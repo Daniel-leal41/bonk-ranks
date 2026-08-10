@@ -69,3 +69,46 @@ body {
   font-size: clamp(2rem, 6vw, 3.2rem);
   line-height: 1.1;
 }
+
+/* ------------------------------------------------------------
+   6) Logo — giro contínuo (idle) + fidget no clique
+   Idle: rotação lenta e contínua, sempre ativa na .big-avatar.
+   Fidget: a classe .fidget troca a animação por um giro rápido
+   que desacelera; a JS remove a classe ao fim (animationend)
+   para o giro contínuo voltar. A logo é circular, então o
+   "salto" de volta aos 0deg não é perceptível.
+   ------------------------------------------------------------ */
+.big-avatar {
+  animation: avatar-idle 16s linear infinite;
+}
+
+.big-avatar.fidget {
+  animation: avatar-fidget 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) 1;
+}
+
+/* Rotação lenta contínua */
+@keyframes avatar-idle {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Giro rápido com desaceleração (fidget spinner) */
+@keyframes avatar-fidget {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(720deg); }
+}
+
+/* ------------------------------------------------------------
+   7) Palavra dinâmica — fade a cada troca
+   #dynamic-word ganha a classe .word-fade na troca de palavra;
+   o fade-in acontece pela animação (a JS força reflow antes de
+   re-adicionar a classe para reiniciar o ciclo).
+   ------------------------------------------------------------ */
+#dynamic-word.word-fade {
+  animation: word-fade-in 0.5s ease;
+}
+
+@keyframes word-fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
