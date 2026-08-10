@@ -28,7 +28,7 @@ window.renderTournamentBracket = function (tournament, headerEl, bracketEl) {
         <span class="badge ${statusClass}">${statusLabel}</span>
       </div>
     </div>
-    <p class="text-secondary mb-0">${tournament.description}</p>
+    <p class="text-secondary mb-0">${window.SiteI18n.localized(tournament.description)}</p>
   `;
 
   // Título da rodada calculado a partir da distância da final:

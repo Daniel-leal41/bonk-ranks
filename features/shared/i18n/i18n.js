@@ -47,6 +47,23 @@
     return key;
   }
 
+  // Resolve um campo localizado dos DADOS (ex.: player.description).
+  // Objeto { locale: texto } → cascata ativo → pt-BR → primeira chave → ''.
+  // String/ausente → legacy de 1 língua, retorna como está.
+  function localized(obj) {
+    if (!obj || typeof obj !== 'object') return obj || '';
+    var active = current();
+    if (typeof obj[active] === 'string' && obj[active] !== '') return obj[active];
+    if (typeof obj[DEFAULT_LOCALE] === 'string' && obj[DEFAULT_LOCALE] !== '') {
+      return obj[DEFAULT_LOCALE];
+    }
+    var keys = Object.keys(obj);
+    for (var i = 0; i < keys.length; i++) {
+      if (typeof obj[keys[i]] === 'string' && obj[keys[i]] !== '') return obj[keys[i]];
+    }
+    return '';
+  }
+
   // Preenche os nós marcados com data-i18n* no DOM atual.
   function applyPage() {
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
@@ -79,6 +96,7 @@
     get: current,
     set: set,
     t: t,
+    localized: localized,
     applyPage: applyPage
   };
 

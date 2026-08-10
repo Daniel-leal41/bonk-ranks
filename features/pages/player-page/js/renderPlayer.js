@@ -14,6 +14,13 @@ document.addEventListener("dataReady", function () {
     return window.SiteI18n ? window.SiteI18n.t(key) : key;
   }
 
+  // Título da aba: nome do jogador + brand, seguindo o padrão do player.title
+  // ("Perfil — BonkRANKS"). username é dado (não traduz). Chama no render para
+  // acompanhar o localeChanged sem deixar o applyPage() do i18n reverter.
+  function setTitle(title) {
+    document.title = title;
+  }
+
   function render() {
     // Destrói o radar anterior antes de remontar o perfil (canvas é recriado
     // pelo innerHTML abaixo; sem destroy, o Chart.js mantém o registro antigo).
@@ -29,9 +36,12 @@ document.addEventListener("dataReady", function () {
     });
 
     if (!player) {
+      setTitle(t('player.title'));
       container.innerHTML = '<p class="player-not-found">' + t('player.notFound') + '</p>';
       return;
     }
+
+    setTitle(player.username + ' — BonkRANKS');
 
     // --- 1. CALCULAR MÉDIA DAS SKILLS ---
     var statsData = [
@@ -62,7 +72,7 @@ document.addEventListener("dataReady", function () {
           <h2 class="h4 fw-bold mb-4">${t('player.description')}</h2>
           <div class="row g-4 align-items-start">
             <div class="col-12 col-md-6 skills-text">
-              <p class="mb-0">${player.description || t('player.noDescription')}</p>
+              <p class="mb-0">${window.SiteI18n.localized(player.description) || t('player.noDescription')}</p>
             </div>
             <div class="col-12 col-md-6">
               <div class="skills-chart-wrapper">

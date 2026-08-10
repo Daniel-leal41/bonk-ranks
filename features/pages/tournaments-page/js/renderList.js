@@ -31,7 +31,7 @@ window.renderTournamentList = function (tournaments, container) {
               <span class="tier-badge tier-${tournament.tier} badge">Tier ${tournament.tier}</span>
             </div>
             <h5 class="card-title fw-bold">${tournament.name}</h5>
-            <p class="card-text text-secondary small flex-grow-1">${tournament.description}</p>
+            <p class="card-text text-secondary small flex-grow-1">${window.SiteI18n.localized(tournament.description)}</p>
             <span class="badge ${statusClass} align-self-start">${statusLabel}</span>
           </div>
         </a>
