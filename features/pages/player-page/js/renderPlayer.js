@@ -14,6 +14,18 @@ document.addEventListener("dataReady", function () {
     return window.SiteI18n ? window.SiteI18n.t(key) : key;
   }
 
+  // Cores do radar dependentes do tema (data-bs-theme no <html>). No modo
+  // claro o branco puro (grade/linhas/rótulos/pontos) sumiria no fundo.
+  function isDark() {
+    return document.documentElement.getAttribute('data-bs-theme') === 'dark';
+  }
+
+  function chartTheme() {
+    return isDark()
+      ? { grid: 'rgba(255,255,255,0.1)', labels: '#fff', points: '#ffffff' }
+      : { grid: 'rgba(0,0,0,0.2)', labels: '#0f1011', points: '#5e17eb' };
+  }
+
   // Título da aba: nome do jogador + brand, seguindo o padrão do player.title
   // ("Perfil — BonkRANKS"). username é dado (não traduz). Chama no render para
   // acompanhar o localeChanged sem deixar o applyPage() do i18n reverter.
@@ -108,6 +120,7 @@ document.addEventListener("dataReady", function () {
     const transformedData = improveContrast(statsData);
 
     // --- 5. INICIAR O GRÁFICO (CHART.JS) ---
+    var theme = chartTheme();
     var ctx = document.getElementById('skillsChart').getContext('2d');
     // tooltip para configurar no hover do mouse
     chartInstance = new Chart(ctx, {
@@ -116,11 +129,11 @@ document.addEventListener("dataReady", function () {
         labels: chartLabels,
         datasets: [{
           data: transformedData,
-          backgroundColor: 'rgba(99, 102, 241, 0.4)',
-          borderColor: '#6366f1',
-          pointBackgroundColor: '#ffffff',
-          pointBorderColor: '#6366f1',
-          borderWidth: 3
+          backgroundColor: 'rgba(94, 23, 235, 0.4)',
+          borderColor: '#5e17eb',
+          pointBackgroundColor: theme.points,
+          pointBorderColor: '#5e17eb',
+          borderWidth: 2
         }]
       },
       options: {
@@ -129,10 +142,10 @@ document.addEventListener("dataReady", function () {
         scales: {
           r: {
             min: 0, max: 100,
-            angleLines: { color: 'rgba(255,255,255,0.1)' },
-            grid: { color: 'rgba(255,255,255,0.1)' },
+            angleLines: { color: theme.grid },
+            grid: { color: theme.grid },
             pointLabels: {
-              color: '#fff',
+              color: theme.labels,
               font: { size: 12, weight: '600' }
             },
             ticks: { display: false }
@@ -155,4 +168,5 @@ document.addEventListener("dataReady", function () {
 
   render();
   document.addEventListener('localeChanged', render);
+  document.addEventListener('themechange', render);
 });

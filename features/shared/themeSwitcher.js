@@ -11,7 +11,7 @@
   var STORAGE_KEY = 'bonk-theme';
 
   function current() {
-    return localStorage.getItem(STORAGE_KEY) || 'light';
+    return localStorage.getItem(STORAGE_KEY) || 'dark';
   }
 
   function apply(theme) {

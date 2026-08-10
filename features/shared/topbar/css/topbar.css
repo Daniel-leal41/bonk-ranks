@@ -9,6 +9,13 @@
   font-weight: 600;
 }
 
+/* A navbar usa bg-body-tertiary no HTML de cada página, mas para o site
+   o tom certo é o de cards/navbar (--bs-secondary-bg): no dark profundo
+   ela deixa de parecer um cinza desconexo do fundo quase preto. */
+header[data-site-topbar] {
+  background-color: var(--bs-secondary-bg);
+}
+
 /* ==========================================================================
    Botão de configurações — DESKTOP (md+, padrão)
    Fica à direita da barra; o padding lateral é só espaçamento do ícone.
@@ -50,4 +57,84 @@
     width: 18px;
     height: 18px;
   }
+}
+
+/* ==========================================================================
+   Tema escuro "profundo" — global
+   Sobrescreve as variáveis do Bootstrap para o dark mode ficar mais escuro
+   que o padrão. Este arquivo é carregado em todas as páginas, então o
+   ajuste vale para o site inteiro. Documentação: docs/proposta-design-charisma.md
+   ========================================================================== */
+[data-bs-theme="dark"] {
+  --bs-body-bg: #0b0d10;          /* fundo geral: quase preto  */
+  --bs-body-color: #d6d9de;       /* texto                     */
+  --bs-secondary-bg: #12151a;     /* navbar/cards              */
+  --bs-tertiary-bg: #0e1115;      /* offcanvas, formulários    */
+  --bs-border-color: #232830;     /* bordas                    */
+  --bs-secondary-color: #9aa2ad;  /* text-muted                */
+}
+
+/* ==========================================================================
+   Identidade visual — roxo escuro da logo (#5e17eb)
+   A cor primária do Bootstrap (--bs-primary) é azul #0d6efd; a identidade
+   do site é um roxo escuro (cor da logo). Sobrescrevemos aqui, num
+   único lugar global, as variáveis E os componentes em que o Bootstrap
+   fixa o azul em hardcoded (btn-outline-primary, checkbox marcado e o
+   focus de form-control/form-select).
+   ========================================================================== */
+
+/* 1) Variáveis — clara e escura (links usam tons adaptados por tema). */
+:root,
+[data-bs-theme="light"] {
+  --bs-primary: #5e17eb;
+  --bs-primary-rgb: 94, 23, 235;
+  --bs-link-color: #5e17eb;
+  --bs-link-hover-color: #4b12bc;
+  --bs-link-color-rgb: 94, 23, 235;
+  --bs-link-hover-color-rgb: 75, 18, 188;
+  --bs-primary-text-emphasis: #3d0f99;
+  --bs-primary-bg-subtle: #ede9fe;
+  --bs-primary-border-subtle: #c4b5fd;
+  --bs-focus-ring-color: rgba(94, 23, 235, 0.25);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(94, 23, 235, 0.25);
+}
+
+[data-bs-theme="dark"] {
+  --bs-link-color: #a78bfa;
+  --bs-link-hover-color: #c4b5fd;
+  --bs-link-color-rgb: 167, 139, 250;
+  --bs-link-hover-color-rgb: 196, 181, 253;
+  --bs-primary-text-emphasis: #a78bfa;
+  --bs-primary-bg-subtle: #2a1850;
+  --bs-primary-border-subtle: #4c1d95;
+  --bs-focus-ring-color: rgba(94, 23, 235, 0.4);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(94, 23, 235, 0.4);
+}
+
+/* 2) Botão outline primário — o Bootstrap fixa #0d6efd nos seus --bs-btn-*. */
+.btn-outline-primary {
+  --bs-btn-color: #5e17eb;
+  --bs-btn-border-color: #5e17eb;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #5e17eb;
+  --bs-btn-hover-border-color: #5e17eb;
+  --bs-btn-focus-shadow-rgb: 94, 23, 235;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #5e17eb;
+  --bs-btn-active-border-color: #5e17eb;
+  --bs-btn-disabled-color: #5e17eb;
+  --bs-btn-disabled-border-color: #5e17eb;
+}
+
+/* 3) Checkbox/switch marcados — Bootstrap fixa o azul. */
+.form-check-input:checked {
+  background-color: #5e17eb;
+  border-color: #5e17eb;
+}
+
+/* 4) Focus de inputs — Bootstrap fixa borda #86b7fe e sombra azul. */
+.form-control:focus,
+.form-select:focus {
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 0.25rem rgba(94, 23, 235, 0.25);
 }
