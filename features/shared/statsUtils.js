@@ -29,6 +29,16 @@ window.StatsUtils = {
     if (val >= 40) return 'D+';
     if (val >= 30) return 'D';
     return 'F';
+  },
+
+  // Melhora o contraste visual dos dados aplicando uma correção gama
+  improveContrast: function (data, max, gamma) {
+    var maxVal = (max !== undefined && max !== null) ? max : 100;
+    var gammaVal = (gamma !== undefined && gamma !== null) ? gamma : 3.6;
+    return data.map(function (v) {
+      var n = Math.max(0, Number(v) || 0) / maxVal;
+      return Math.pow(n, gammaVal) * maxVal;
+    });
   }
 };
 

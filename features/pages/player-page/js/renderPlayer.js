@@ -53,7 +53,7 @@ document.addEventListener("dataReady", function () {
       return;
     }
 
-    setTitle(player.username + ' — BonkRANKS');
+    setTitle(player.username + ' - BonkRANKS');
 
     // --- 1. CALCULAR MÉDIA DAS SKILLS ---
     var statsData = [
@@ -110,14 +110,7 @@ document.addEventListener("dataReady", function () {
       return [label, rankLetter];
     });
 
-    function improveContrast(data, max = 100, gamma = 4.9) {
-      return data.map(v => {
-        const n = Math.max(0, Number(v) || 0) / max;
-        return Math.pow(n, gamma) * max;
-      });
-    }
-
-    const transformedData = improveContrast(statsData);
+    var transformedData = window.StatsUtils.improveContrast(statsData);
 
     // --- 5. INICIAR O GRÁFICO (CHART.JS) ---
     var theme = chartTheme();
@@ -129,7 +122,7 @@ document.addEventListener("dataReady", function () {
         labels: chartLabels,
         datasets: [{
           data: transformedData,
-          backgroundColor: 'rgba(94, 23, 235, 0.4)',
+          backgroundColor: 'rgba(104, 34, 245, 0.4)',
           borderColor: '#5e17eb',
           pointBackgroundColor: theme.points,
           pointBorderColor: '#5e17eb',
