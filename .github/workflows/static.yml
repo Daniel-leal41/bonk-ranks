@@ -31,10 +31,40 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Apply Cache Busting
+        run: |
+          node -e '
+            const fs = require("fs");
+            const path = require("path");
+            const sha = "${{ github.sha }}".substring(0, 7);
+
+            function walk(dir) {
+              const entries = fs.readdirSync(dir, { withFileTypes: true });
+              for (const entry of entries) {
+                const fullPath = path.join(dir, entry.name);
+                if (entry.isDirectory()) {
+                  if (entry.name === ".git" || entry.name === ".github") continue;
+                  walk(fullPath);
+                } else if (entry.name.endsWith(".html")) {
+                  let html = fs.readFileSync(fullPath, "utf8");
+                  // Captura links locais que terminam com .js ou .css e injeta ?v=SHA
+                  html = html.replace(/(src|href)="([^"]+\.(?:js|css))"/g, (match, attr, filepath) => {
+                    // Ignora CDNs e links externos (começam com http/https ou //)
+                    if (/^(?:https?:|\/\/)/i.test(filepath)) {
+                      return match;
+                    }
+                    return `${attr}="${filepath}?v=${sha}"`;
+                  });
+                  fs.writeFileSync(fullPath, html, "utf8");
+                  console.log(`Cache Busted: ${fullPath}`);
+                }
+              }
+            }
+            walk(".");
+          '
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-
           path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
