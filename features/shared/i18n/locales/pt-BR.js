@@ -36,6 +36,13 @@ window.SiteI18nLocales['pt-BR'] = {
   'search.filterRank': 'Rank',
   'search.placeholder': 'Nova busca...',
   'results.empty': 'Nenhum jogador encontrado.',
+  'search.pagination.prev': 'Anterior',
+  'search.pagination.next': 'Próxima',
+  'search.pagination.pageOf': 'Página',
+  'search.pagination.of': 'de',
+  'search.pagination.nav': 'Página de resultados',
+  'search.pagination.result': 'resultado',
+  'search.pagination.results': 'resultados',
 
   'player.title': 'Perfil - BonkRANKS',
   'player.notFound': 'Jogador não encontrado.',

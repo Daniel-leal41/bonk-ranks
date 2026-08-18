@@ -1,7 +1,8 @@
 // searchController.js
 // Responsabilidade: ORQUESTRAR a página de busca.
-//   - Define o filtro puro (genérico por campos)
-//   - Lê a URL, captura filtros, escuta eventos e chama o render
+//   - Define o filtro puro (genérico por campos) e a paginação pura
+//   - Lê a URL, captura filtros, escuta eventos e chama os renders
+//   - Guarda o estado de paginação { page } e decide quando resetar
 // Só roda em searchPage.html.
 
 // --- FILTRO PURO ---
@@ -27,14 +28,29 @@ window.searchPlayers = function(query, players, filters = {}) {
   });
 };
 
+// --- PAGINAÇÃO PURA ---
+// Fatia a lista sem mutá-la: página 1 = primeiros perPage itens.
+// Mesmo espírito do searchPlayers: sem DOM, sem estado.
+window.paginate = function (items, page, perPage) {
+  var start = (page - 1) * perPage;
+  return items.slice(start, start + perPage);
+};
+
 // --- ORQUESTRAÇÃO ---
 (function () {
+  var PER_PAGE = 10;
+
   function init() {
     var params = new URLSearchParams(window.location.search);
     var queryInput = document.getElementById("topbar-input");
     queryInput.value = params.get("q") || "";
 
     var container = document.getElementById("results-container");
+    var paginationEl = document.getElementById("pagination-container");
+
+    // Estado da paginação: muda só via Anterior/Próxima (onChange).
+    // Qualquer mudança de busca/filtro reseta para a página 1 (updateDisplay).
+    var state = { page: 1 };
 
     // Lê todos os checkboxes marcados e agrupa por campo (a classe filter-<campo>)
     function readFilters() {
@@ -50,10 +66,27 @@ window.searchPlayers = function(query, players, filters = {}) {
       return filters;
     }
 
-    // Lê filtros atuais, filtra e manda renderizar
+    // Renderiza o estado atual SEM resetar a página (Anterior/Próxima, troca
+    // de idioma). Clampa a página se os filtros encolheram o resultado:
+    // nunca renderiza em branco — cai na última página válida.
+    function renderDisplay() {
+      var filtered = window.searchPlayers(queryInput.value, window.players, readFilters());
+      var totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
+      state.page = Math.min(state.page, totalPages);
+
+      window.renderResults(window.paginate(filtered, state.page, PER_PAGE), container);
+      window.renderPagination({
+        page: state.page,
+        totalPages: totalPages,
+        total: filtered.length,
+        onChange: function (p) { state.page = p; renderDisplay(); }
+      }, paginationEl);
+    }
+
+    // Reset para a página 1 + render (digitação, filtros, clear).
     function updateDisplay() {
-      var results = window.searchPlayers(queryInput.value, window.players, readFilters());
-      window.renderResults(results, container);
+      state.page = 1;
+      renderDisplay();
     }
 
     // Escuta mudanças nos checkboxes de qualquer filtro
@@ -73,8 +106,9 @@ window.searchPlayers = function(query, players, filters = {}) {
     // Execução inicial
     updateDisplay();
 
-    // Re-renderiza ao trocar de idioma (estado vazio e resultados).
-    document.addEventListener('localeChanged', updateDisplay);
+    // Re-renderiza ao trocar de idioma (estado vazio, resultados e labels da
+    // paginação). Mantém a página atual — só busca/filtro resetam para a 1ª.
+    document.addEventListener('localeChanged', renderDisplay);
   }
 
   // Se os dados já existem no window (fetch resolvido antes deste script rodar,

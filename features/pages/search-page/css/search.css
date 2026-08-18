@@ -97,3 +97,17 @@ body {
   text-align: center;
   padding: 2rem;
 }
+
+/* ------------------------------------------------------------
+   8) Nav de paginação (10 jogadores por página)
+   Respiro vertical entre a lista de resultados e o nav Bootstrap.
+   O estilo dos itens (bordas, estados disabled) é do próprio
+   Bootstrap; aqui só o espaçamento do conjunto.
+   ------------------------------------------------------------ */
+#pagination-container {
+  margin-top: 1.5rem;
+}
+
+#pagination-container .pagination {
+  margin-bottom: 0;
+}
