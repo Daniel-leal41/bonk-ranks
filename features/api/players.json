@@ -33,7 +33,7 @@
       "Mental": {
         "Focus": 93,
         "Confidence": 97,
-        "Stamina": 101
+        "Stamina": 96
       },
       "Special": {
         "Crowd Control": 95,
@@ -88,7 +88,6 @@
     }
   },
   {
-    "id": "p003",
     "avatarUrl": "https://res.cloudinary.com/dmmunstfz/image/upload/q_auto/f_auto/v1776465167/Dor_rx4fiz.png",
     "username": "Dorwammu",
     "title": "",
@@ -97,20 +96,20 @@
     "description": "",
     "skills": {
       "IQ": {
-        "Consistency": 86,
+        "Consistency": 90,
         "Decision Making": 90,
         "Mechanics": 90,
-        "Control": 81
+        "Control": 83
       },
       "Defense": {
         "Positioning": 95,
-        "Recovery": 93,
+        "Recovery": 95,
         "Counter": 96
       },
       "Offense": {
-        "Pressure": 79,
-        "Combo": 82,
-        "Finishing": 83
+        "Pressure": 83,
+        "Combo": 84,
+        "Finishing": 86
       },
       "Core": {
         "Timing": 94,
@@ -129,7 +128,8 @@
         "Synergy": 87,
         "luck": 95
       }
-    }
+    },
+    "id": "p003"
   },
   {
     "avatarUrl": "https://res.cloudinary.com/dmmunstfz/image/upload/q_auto/f_auto/v1776464971/frigo_wbjjo9.png",
@@ -137,7 +137,7 @@
     "title": "",
     "region": "BR",
     "rank": "",
-    "description": "Frigo_bar is a player",
+    "description": "",
     "skills": {
       "IQ": {
         "Consistency": 95,
@@ -168,8 +168,8 @@
         "Stamina": 95
       },
       "Special": {
-        "Crowd Control": 96,
-        "Synergy": 96,
+        "Crowd Control": 94,
+        "Synergy": 94,
         "luck": 85
       }
     },
@@ -274,7 +274,7 @@
     "id": "p006"
   },
   {
-    "avatarUrl": "https://bb-api.bonkleagues.io/skins/fa5e1345d12dd84fcb022a049f9e04c21f1ee80fbe4c05f8107eb5c40a4641e6/image.png?size=1024",
+    "avatarUrl": "https://bb-api.bonkleagues.io/skins/fa5e1345d12dd84fcb022a049f9e04c21f1ee80fbe4c05f8107eb5c40a4641e6/image.png?size=256",
     "username": "Ozmon",
     "title": "",
     "region": "",
@@ -290,7 +290,41 @@
     "region": "",
     "rank": "",
     "description": "",
-    "skills": {},
+    "skills": {
+      "IQ": {
+        "Consistency": 83,
+        "Decision Making": 88,
+        "Mechanics": 90,
+        "Control": 91
+      },
+      "Defense": {
+        "Positioning": 85,
+        "Recovery": 86,
+        "Counter": 82
+      },
+      "Offense": {
+        "Pressure": 83,
+        "Combo": 89,
+        "Finishing": 85
+      },
+      "Core": {
+        "Timing": 90,
+        "Reaction": 91,
+        "Adaptability": 81,
+        "Patience": 79,
+        "Unpredictability": 80
+      },
+      "Mental": {
+        "Focus": 81,
+        "Confidence": 79,
+        "Stamina": 78
+      },
+      "Special": {
+        "Crowd Control": 80,
+        "Synergy": 74,
+        "luck": 77
+      }
+    },
     "id": "p009"
   },
   {
@@ -317,10 +351,44 @@
     "avatarUrl": "https://bb-api.bonkleagues.io/skins/cb254ca9b559f25ce1d0d2da28c642b8fc421842eddfd174c1f59772d2741d98/image.png?size=1024",
     "username": "TypicalHorror",
     "title": "",
-    "region": "",
+    "region": "USA",
     "rank": "",
     "description": "",
-    "skills": {},
+    "skills": {
+      "IQ": {
+        "Consistency": 75,
+        "Decision Making": 71,
+        "Mechanics": 73,
+        "Control": 80
+      },
+      "Defense": {
+        "Positioning": 72,
+        "Recovery": 74,
+        "Counter": 76
+      },
+      "Offense": {
+        "Pressure": 70,
+        "Combo": 71,
+        "Finishing": 71
+      },
+      "Core": {
+        "Timing": 78,
+        "Reaction": 74,
+        "Adaptability": 73,
+        "Patience": 79,
+        "Unpredictability": 79
+      },
+      "Mental": {
+        "Focus": 74,
+        "Confidence": 71,
+        "Stamina": 73
+      },
+      "Special": {
+        "Crowd Control": 74,
+        "Synergy": 73,
+        "luck": 74
+      }
+    },
     "id": "p012"
   },
   {
@@ -360,7 +428,41 @@
     "region": "",
     "rank": "",
     "description": "",
-    "skills": {},
+    "skills": {
+      "IQ": {
+        "Consistency": 98,
+        "Decision Making": 99,
+        "Mechanics": 91,
+        "Control": 96
+      },
+      "Defense": {
+        "Positioning": 96,
+        "Recovery": 94,
+        "Counter": 97
+      },
+      "Offense": {
+        "Pressure": 89,
+        "Combo": 91,
+        "Finishing": 90
+      },
+      "Core": {
+        "Timing": 93,
+        "Reaction": 92,
+        "Adaptability": 97,
+        "Patience": 99,
+        "Unpredictability": 91
+      },
+      "Mental": {
+        "Focus": 99,
+        "Confidence": 90,
+        "Stamina": 87
+      },
+      "Special": {
+        "Crowd Control": 88,
+        "Synergy": 89,
+        "luck": 84
+      }
+    },
     "id": "p016"
   },
   {
@@ -480,7 +582,41 @@
     "region": "",
     "rank": "",
     "description": "",
-    "skills": {},
+    "skills": {
+      "IQ": {
+        "Consistency": 94,
+        "Decision Making": 95,
+        "Mechanics": 91,
+        "Control": 93
+      },
+      "Defense": {
+        "Positioning": 92,
+        "Recovery": 91,
+        "Counter": 94
+      },
+      "Offense": {
+        "Pressure": 89,
+        "Combo": 86,
+        "Finishing": 91
+      },
+      "Core": {
+        "Timing": 90,
+        "Reaction": 88,
+        "Adaptability": 91,
+        "Patience": 89,
+        "Unpredictability": 90
+      },
+      "Mental": {
+        "Focus": 91,
+        "Confidence": 90,
+        "Stamina": 92
+      },
+      "Special": {
+        "Crowd Control": 94,
+        "Synergy": 89,
+        "luck": 91
+      }
+    },
     "id": "p028"
   },
   {
@@ -520,7 +656,41 @@
     "region": "",
     "rank": "",
     "description": "",
-    "skills": {},
+    "skills": {
+      "IQ": {
+        "Consistency": 95,
+        "Decision Making": 93,
+        "Mechanics": 92,
+        "Control": 92
+      },
+      "Defense": {
+        "Positioning": 90,
+        "Recovery": 96,
+        "Counter": 97
+      },
+      "Offense": {
+        "Pressure": 98,
+        "Combo": 93,
+        "Finishing": 96
+      },
+      "Core": {
+        "Timing": 98,
+        "Reaction": 93,
+        "Adaptability": 95,
+        "Patience": 98,
+        "Unpredictability": 91
+      },
+      "Mental": {
+        "Focus": 97,
+        "Confidence": 93,
+        "Stamina": 89
+      },
+      "Special": {
+        "Crowd Control": 89,
+        "Synergy": 91,
+        "luck": 87
+      }
+    },
     "id": "p032"
   },
   {

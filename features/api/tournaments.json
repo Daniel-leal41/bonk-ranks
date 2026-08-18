@@ -5,7 +5,10 @@
       "logo": "https://placehold.co/512?text=WI",
       "tier": 1,
       "status": "em andamento",
-      "description": "",
+      "description": {
+        "pt-BR": "Torneio do Wizardlypig, primeira edição.",
+        "en": "Wizardlypig's invitational, first edition."
+      },
       "rounds": [
         {
           "roundIndex": 0,
@@ -355,27 +358,29 @@
               "player1": {
                 "id": "p005",
                 "name": "purpetuity",
-                "score": 0,
-                "winner": false
+                "score": 4,
+                "winner": true
               },
               "player2": {
-                "name": ".",
-                "score": 0,
+                "id": "p009",
+                "name": "Lexi_Bexi",
+                "score": 1,
                 "winner": false
               }
             },
             {
               "id": "m-3-2",
               "player1": {
-                "name": ".",
+                "id": "p007",
+                "name": "EnderCron",
                 "score": 0,
                 "winner": false
               },
               "player2": {
                 "id": "p016",
                 "name": "siae",
-                "score": 0,
-                "winner": false
+                "score": 4,
+                "winner": true
               }
             },
             {
@@ -383,8 +388,8 @@
               "player1": {
                 "id": "p032",
                 "name": "NunnaIIy",
-                "score": 0,
-                "winner": false
+                "score": 4,
+                "winner": true
               },
               "player2": {
                 "id": "p022",
@@ -398,13 +403,13 @@
               "player1": {
                 "id": "p004",
                 "name": "Frigo_Bar",
-                "score": 0,
-                "winner": false
+                "score": 4,
+                "winner": true
               },
               "player2": {
                 "id": "p028",
                 "name": "wizardlypig",
-                "score": 0,
+                "score": 1,
                 "winner": false
               }
             }
@@ -416,25 +421,29 @@
             {
               "id": "m-4-1",
               "player1": {
-                "name": ".",
-                "score": 0,
+                "id": "p005",
+                "name": "purpetuity",
+                "score": 3,
                 "winner": false
               },
               "player2": {
-                "name": ".",
-                "score": 0,
-                "winner": false
+                "id": "p016",
+                "name": "siae",
+                "score": 4,
+                "winner": true
               }
             },
             {
               "id": "m-4-2",
               "player1": {
-                "name": ".",
+                "id": "p032",
+                "name": "NunnaIIy",
                 "score": 0,
                 "winner": false
               },
               "player2": {
-                "name": ".",
+                "id": "p004",
+                "name": "Frigo_bar",
                 "score": 0,
                 "winner": false
               }
@@ -447,7 +456,8 @@
             {
               "id": "m-5-1",
               "player1": {
-                "name": ".",
+                "id": "p016",
+                "name": "siae",
                 "score": 0,
                 "winner": false
               },
@@ -460,7 +470,8 @@
           ]
         }
       ],
-      "id": "t1"
+      "id": "t1",
+      "createdAt": "2026-01-01T00:00:00Z"
     }
   ]
 }
