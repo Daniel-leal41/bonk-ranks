@@ -16,26 +16,38 @@ window.filterTournaments = function (query, tournaments) {
 };
 
 // --- ORQUESTRAÇÃO ---
-document.addEventListener("tournamentsDataReady", function () {
-  var searchInput = document.getElementById("tournament-search");
-  var container = document.getElementById("tournaments-container");
+(function () {
+  function init() {
+    var searchInput = document.getElementById("tournament-search");
+    var container = document.getElementById("tournaments-container");
 
-  function updateDisplay() {
-    window.renderTournamentList(
-      window.filterTournaments(searchInput.value, window.tournaments.tournaments),
-      container
-    );
+    function updateDisplay() {
+      window.renderTournamentList(
+        window.filterTournaments(searchInput.value, window.tournaments.tournaments),
+        container
+      );
+    }
+
+    searchInput.addEventListener("input", updateDisplay);
+
+    document.querySelector(".clear-btn").addEventListener("click", function () {
+      searchInput.value = "";
+      updateDisplay();
+    });
+
+    updateDisplay();
+
+    // Re-renderiza ao trocar de idioma (estado vazio e labels de status).
+    document.addEventListener('localeChanged', updateDisplay);
   }
 
-  searchInput.addEventListener("input", updateDisplay);
-
-  document.querySelector(".clear-btn").addEventListener("click", function () {
-    searchInput.value = "";
-    updateDisplay();
-  });
-
-  updateDisplay();
-
-  // Re-renderiza ao trocar de idioma (estado vazio e labels de status).
-  document.addEventListener('localeChanged', updateDisplay);
-});
+  // Se os dados já existem no window (fetch resolvido antes deste script rodar,
+  // ex.: cache), executa init() imediatamente; senão aguarda o evento
+  // tournamentsDataReady. Evita a race condition de o evento ser disparado
+  // antes do listener existir.
+  if (window.tournaments) {
+    init();
+  } else {
+    document.addEventListener("tournamentsDataReady", init);
+  }
+})();

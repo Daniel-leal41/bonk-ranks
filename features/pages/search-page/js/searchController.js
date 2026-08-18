@@ -28,50 +28,61 @@ window.searchPlayers = function(query, players, filters = {}) {
 };
 
 // --- ORQUESTRAÇÃO ---
-document.addEventListener("dataReady", function () {
-  var params = new URLSearchParams(window.location.search);
-  var queryInput = document.getElementById("topbar-input");
-  queryInput.value = params.get("q") || "";
+(function () {
+  function init() {
+    var params = new URLSearchParams(window.location.search);
+    var queryInput = document.getElementById("topbar-input");
+    queryInput.value = params.get("q") || "";
 
-  var container = document.getElementById("results-container");
+    var container = document.getElementById("results-container");
 
-  // Lê todos os checkboxes marcados e agrupa por campo (a classe filter-<campo>)
-  function readFilters() {
-    var filters = {};
-    document.querySelectorAll('input[type="checkbox"]:checked').forEach(function(cb) {
-      cb.classList.forEach(function(cls) {
-        if (cls.indexOf("filter-") === 0) {
-          var field = cls.slice("filter-".length);
-          (filters[field] = filters[field] || []).push(cb.value);
-        }
+    // Lê todos os checkboxes marcados e agrupa por campo (a classe filter-<campo>)
+    function readFilters() {
+      var filters = {};
+      document.querySelectorAll('input[type="checkbox"]:checked').forEach(function(cb) {
+        cb.classList.forEach(function(cls) {
+          if (cls.indexOf("filter-") === 0) {
+            var field = cls.slice("filter-".length);
+            (filters[field] = filters[field] || []).push(cb.value);
+          }
+        });
       });
+      return filters;
+    }
+
+    // Lê filtros atuais, filtra e manda renderizar
+    function updateDisplay() {
+      var results = window.searchPlayers(queryInput.value, window.players, readFilters());
+      window.renderResults(results, container);
+    }
+
+    // Escuta mudanças nos checkboxes de qualquer filtro
+    document.querySelectorAll('input[type="checkbox"][class*="filter-"]').forEach(el => {
+      el.addEventListener('change', updateDisplay);
     });
-    return filters;
-  }
 
-  // Lê filtros atuais, filtra e manda renderizar
-  function updateDisplay() {
-    var results = window.searchPlayers(queryInput.value, window.players, readFilters());
-    window.renderResults(results, container);
-  }
+    // Escuta digitação no campo de busca
+    queryInput.addEventListener('input', updateDisplay);
 
-  // Escuta mudanças nos checkboxes de qualquer filtro
-  document.querySelectorAll('input[type="checkbox"][class*="filter-"]').forEach(el => {
-    el.addEventListener('change', updateDisplay);
-  });
+    // Botão de limpar: zera só a query, mantém filtros de região/rank
+    document.querySelector('.clear-btn').addEventListener('click', function () {
+      queryInput.value = "";
+      updateDisplay();
+    });
 
-  // Escuta digitação no campo de busca
-  queryInput.addEventListener('input', updateDisplay);
-
-  // Botão de limpar: zera só a query, mantém filtros de região/rank
-  document.querySelector('.clear-btn').addEventListener('click', function () {
-    queryInput.value = "";
+    // Execução inicial
     updateDisplay();
-  });
 
-  // Execução inicial
-  updateDisplay();
+    // Re-renderiza ao trocar de idioma (estado vazio e resultados).
+    document.addEventListener('localeChanged', updateDisplay);
+  }
 
-  // Re-renderiza ao trocar de idioma (estado vazio e resultados).
-  document.addEventListener('localeChanged', updateDisplay);
-});
+  // Se os dados já existem no window (fetch resolvido antes deste script rodar,
+  // ex.: cache), executa init() imediatamente; senão aguarda o evento dataReady.
+  // Evita a race condition de o evento ser disparado antes do listener existir.
+  if (window.players) {
+    init();
+  } else {
+    document.addEventListener("dataReady", init);
+  }
+})();
