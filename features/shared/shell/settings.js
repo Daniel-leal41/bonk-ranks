@@ -1,6 +1,6 @@
-// features/shared/topbar/settings.js
+// features/shared/shell/settings.js
 // Responsabilidade: painel de configurações (offcanvas à direita). Separado do
-// topbar.js — a top bar apenas chama window.SiteSettings.open(); todo o
+// shell.js — o shell apenas chama window.SiteSettings.open(); todo o
 // conteúdo e comportamento das configurações vivem aqui.
 //
 // Tema: a lógica fica em features/shared/themeSwitcher.js (window.ThemeSwitcher);

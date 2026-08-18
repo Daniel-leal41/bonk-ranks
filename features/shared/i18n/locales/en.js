@@ -20,6 +20,7 @@ window.SiteI18nLocales['en'] = {
   'nav.home': 'Home',
   'nav.search': 'Search',
   'nav.tournaments': 'Tournaments',
+  'nav.compare': 'Compare',
   'nav.openMenu': 'Open menu',
   'nav.settings': 'Settings',
   'nav.brandAlt': 'BonkRANKS logo',
@@ -53,6 +54,24 @@ window.SiteI18nLocales['en'] = {
   'tournaments.status.finished': 'Finished',
   'tournaments.status.ongoing': 'Ongoing',
 
+  'compare.title': 'Compare - BonkRANKS',
+  'compare.heading': 'Compare Players',
+  'compare.pickerPlaceholder': 'Search a player to compare...',
+  'compare.limitNote': 'Up to 4 players per comparison.',
+  'compare.noResults': 'No players found.',
+  'compare.remove': 'Remove',
+  'compare.status': 'Status',
+  'compare.win': 'WIN',
+  'compare.overall': 'Overall average',
+  'compare.empty': 'Select players to compare.',
+  'compare.minTwo': 'Add one more player to compare (minimum of 2).',
+  'compare.selectPlayer': 'Select a player',
+  'compare.playerA': 'Player 1',
+  'compare.playerB': 'Player 2',
+  'compare.selectPlayer': 'Select a player',
+  'compare.playerA': 'Player 1',
+  'compare.playerB': 'Player 2',
+
   'bracket.title': 'Bracket - BonkRANKS',
   'bracket.backToTournaments': '← Back to Tournaments',
   'bracket.tbd': 'TBD',
@@ -64,5 +83,7 @@ window.SiteI18nLocales['en'] = {
   'bracket.round.3': 'Round of 16',
   'bracket.round.4': 'Round of 32',
   'bracket.round.5': 'Round of 64',
-  'bracket.round.6': 'Round of 128'
+  'bracket.round.6': 'Round of 128',
+  'footer.fanMade': 'Fan-made Bonk.io website, not affiliated with the game. Informational content only.',
+  'footer.github': 'GitHub'
 };

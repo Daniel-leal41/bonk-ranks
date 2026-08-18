@@ -20,6 +20,7 @@ window.SiteI18nLocales['pt-BR'] = {
   'nav.home': 'Início',
   'nav.search': 'Buscar',
   'nav.tournaments': 'Torneios',
+  'nav.compare': 'Comparar',
   'nav.openMenu': 'Abrir menu',
   'nav.settings': 'Configurações',
   'nav.brandAlt': 'Logo BonkRANKS',
@@ -53,6 +54,21 @@ window.SiteI18nLocales['pt-BR'] = {
   'tournaments.status.finished': 'Finalizado',
   'tournaments.status.ongoing': 'Em andamento',
 
+  'compare.title': 'Comparador - BonkRANKS',
+  'compare.heading': 'Comparar Jogadores',
+  'compare.pickerPlaceholder': 'Buscar jogador para comparar...',
+  'compare.limitNote': 'Limite de 4 jogadores por comparação.',
+  'compare.noResults': 'Nenhum jogador encontrado.',
+  'compare.remove': 'Remover',
+  'compare.status': 'Status',
+  'compare.win': 'WIN',
+  'compare.overall': 'Média geral',
+  'compare.empty': 'Selecione jogadores para comparar.',
+  'compare.minTwo': 'Adicione mais um jogador para comparar (mínimo de 2).',
+  'compare.selectPlayer': 'Selecione um jogador',
+  'compare.playerA': 'Jogador 1',
+  'compare.playerB': 'Jogador 2',
+
   'bracket.title': 'Chaveamento - BonkRANKS',
   'bracket.backToTournaments': '← Voltar para Torneios',
   'bracket.tbd': 'A definir',
@@ -64,5 +80,8 @@ window.SiteI18nLocales['pt-BR'] = {
   'bracket.round.3': 'Oitavas de Final',
   'bracket.round.4': 'Dezesseis Avos',
   'bracket.round.5': 'Trinta e Dois Avos',
-  'bracket.round.6': 'Sessenta e Quatro Avos'
+  'bracket.round.6': 'Sessenta e Quatro Avos',
+
+  'footer.fanMade': 'Site feito por fãs do Bonk.io, sem afiliação com o jogo. Conteúdo apenas informacional.',
+  'footer.github': 'GitHub'
 };

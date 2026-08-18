@@ -1,5 +1,5 @@
-/* features/shared/topbar/topbar.css
-   Complementos do Bootstrap para a top bar global.
+/* features/shared/shell/css/shell.css
+   Complementos do Bootstrap para o shell global (top bar + footer).
    O Bootstrap já cobre: layout do navbar, collapse/hamburger, brand.
    Aqui fica só o que ele não expressa. */
 
@@ -58,6 +58,18 @@ header[data-site-topbar] {
     height: 18px;
   }
 }
+
+/* ==========================================================================
+   Footer global — montada dinamicamente pelo shell.js (data-site-footer)
+   Mesmo tom da topbar (--bs-secondary-bg) e borda sutil no topo, para
+   fechar o layout nas duas direções. O flex do body + main flex:1 já
+   mantém a footer na base da página; aqui fica só o visual.
+   ========================================================================== */
+.site-footer {
+  background-color: var(--bs-secondary-bg);
+  border-top: 1px solid var(--bs-border-color);
+}
+
 
 /* ==========================================================================
    Tema escuro "profundo" — global

@@ -1,7 +1,7 @@
 // features/shared/themeSwitcher.js
 // Responsabilidade: aplicar e persistir o tema (light/dark) do site via
 // data-bs-theme do Bootstrap 5.3. Não tem UI — o controle fica no painel de
-// configurações (features/shared/topbar/settings.js), que chama
+// configurações (features/shared/shell/settings.js), que chama
 // window.ThemeSwitcher.
 //
 // Carregado no <head> de cada página para aplicar o tema salvo antes do
