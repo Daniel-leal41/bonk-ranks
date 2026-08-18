@@ -63,6 +63,7 @@ window.SiteI18nLocales['en'] = {
 
   'compare.title': 'Compare - BonkRANKS',
   'compare.heading': 'Compare Players',
+  
   'compare.pickerPlaceholder': 'Search a player to compare...',
   'compare.limitNote': 'Up to 4 players per comparison.',
   'compare.noResults': 'No players found.',

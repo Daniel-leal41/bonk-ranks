@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n-title="compare.title"></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/compare.css">
+  <link rel="stylesheet" href="../../shared/shell/css/shell.css">
+  <link rel="icon" type="image/x-icon"
+    href="https://res.cloudinary.com/dmmunstfz/image/upload/q_auto/f_auto/v1776456354/BonkRankLogo_tbhxaw.png">
+  <script src="../../shared/themeSwitcher.js"></script>
+  <script src="../../shared/i18n/locales/pt-BR.js"></script>
+  <script src="../../shared/i18n/locales/en.js"></script>
+  <script src="../../shared/i18n/i18n.js"></script>
+</head>
+<body>
+
+  <header class="navbar bg-body-tertiary" data-site-topbar></header>
+
+  <main class="container compare-main py-5">
+    <h1 class="h3 fw-bold mb-4" data-i18n="compare.heading"></h1>
+
+    <!-- Seleção dos dois jogadores -->
+    <div class="row g-3 mb-4">
+      <div class="col-12 col-md-6">
+        <label for="compare-player-a" class="form-label fw-semibold" data-i18n="compare.playerA"></label>
+        <select id="compare-player-a" class="form-select"></select>
+      </div>
+      <div class="col-12 col-md-6">
+        <label for="compare-player-b" class="form-label fw-semibold" data-i18n="compare.playerB"></label>
+        <select id="compare-player-b" class="form-select"></select>
+      </div>
+    </div>
+
+    <!-- Estado vazio / mínimo de jogadores -->
+    <p id="compare-empty" class="text-secondary"></p>
+
+    <!-- Radar sobreposto (dois datasets) -->
+    <div id="compare-chart-wrapper" class="compare-chart-wrapper" hidden>
+      <canvas id="compareChart"></canvas>
+    </div>
+
+    <!-- Tabela: quem vence em cada status (6 categorias + média geral) -->
+    <section id="compare-table-section" class="compare-table-wrap" hidden>
+      
+      <div class="table-responsive">
+        <table class="table table-hover align-middle compare-table">
+          <thead>
+            <tr id="compare-table-head"></tr>
+          </thead>
+          <tbody id="compare-table-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- BIBLIOTECA CHART.JS VIA CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Bootstrap + top bar e configurações -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../shared/shell/settings.js"></script>
+  <script src="../../shared/shell/shell.js"></script>
+
+  <!-- Dados e utilitários do projeto -->
+  <script src="../../api/data.js"></script>
+  <script src="../../shared/statsUtils.js"></script>
+  <script src="js/compare.js"></script>
+  <script src="js/renderCompare.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+/* ============================================================
+   BonkRANKS — Compare Page (comparePage.html)
+   Estilos complementares ao Bootstrap 5.3.
+   Regra: nunca usar estilos inline no HTML.
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1) Layout geral da página
+   Mesmo comportamento das demais páginas: o body é um flex
+   column de 100vh e o main cresce abaixo da navbar.
+   ------------------------------------------------------------ */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.compare-main {
+  flex: 1;
+}
+
+/* ------------------------------------------------------------
+   2) Wrapper do gráfico
+   Centralizado e com largura máxima para o radar sobreposto
+   (dois datasets ficam legíveis em ~520px no desktop e se
+   encolhem no mobile — mesmo padrão da player page).
+   ------------------------------------------------------------ */
+.compare-chart-wrapper {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.compare-chart-wrapper canvas {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100%;
+}
+/* ------------------------------------------------------------
+   3) Tabela de vencedores ("quem vence em cada status")
+   Centralizada com largura máxima; a linha "Média geral" ganha
+   borda superior e fundo para fechar a leitura. O destaque do
+   vencedor usa as utilitárias do Bootstrap (fw-bold text-success)
+   — sem badge, sem delta (decisão de design).
+   ------------------------------------------------------------ */
+.compare-table-wrap {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.compare-table .total-row {
+  border-top: 2px solid var(--bs-border-color);
+  font-weight: 700;
+  background-color: var(--bs-tertiary-bg);
+}
